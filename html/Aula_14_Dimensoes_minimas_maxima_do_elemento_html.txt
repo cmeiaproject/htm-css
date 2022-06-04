@@ -1,0 +1,35 @@
+Aula 14 - Dimensoes (altura e largura) minimas e maximas do elemento
+=======
+
+. é possivel definir as dimensões (largura e altura) minima e máxima de um elemento html
+
+. MIN-HEIGTH
+
+	. esta propriedade css, define qual a altura minima que um elemento deve ter.
+	. isto faz com que o elemento html aja de modo responsivo, referente a altura, para que, não haja uma "quebra", um overflow. Quer dizer, fazer com que barra de rolagem vertical não apareça.
+	. pois, sem esta informação, caso a area de exibição seja menor que a area que o elemento ocupe, a barra de rolagem vertical aparece. Mas, quando definido a altura minima, a altura do elemento vai se adaptando até chegar a altura minima definida.
+	sintaxe:
+			min-height: <valor>;
+
+. MAX-HEIGTH
+
+	. esta propriedade css, define qual a altura maxia que um elemento deve ter.
+	. o tratamento é o mesmo que faz a propriedade [MIN-HEIGTH], só que trata com a altura máxima do elemento.
+	sintaxe:
+			max-height: <valor>;
+	
+. MIN-WIDTH
+
+	. esta propriedade css, define qual a largura minima que um elemento deve ter.
+	. isto faz com que o elemento html aja de modo responsivo, referente a largura, para que, não haja uma "quebra", um overflow. Quer dizer, fazer com que barra de rolagem horizontal não apareça.
+	. pois, sem esta informação, caso a area de exibição seja menor que a area que o elemento ocupe, a barra de rolagem horizontal aparece. Mas, quando definido a largura minima, a largura do elemento vai se adaptando até chegar a largura minima definida.
+	sintaxe:
+			min-width: <valor>;
+
+
+. MAX-HIDTH
+
+	. esta propriedade css, define qual a largura maxia que um elemento deve ter.
+	. o tratamento é o mesmo que faz a propriedade [MIN-WIDTH], só que trata com a largura máxima do elemento.
+	sintaxe:
+			max-width: <valor>;

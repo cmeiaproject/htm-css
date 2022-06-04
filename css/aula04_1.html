@@ -1,0 +1,243 @@
+<html>
+	<head>
+		<title>Aula 4</title>
+		<style>
+			#div_cor, #div_gradient
+			{
+				width: 200px;
+				height: 250px;
+			}
+			#div_gradient
+			{
+				margin-top: 10px;
+			}
+			
+			#conteudo
+			{
+				width: 100%;
+				height: 700px;
+				background-color: yellow;
+//				opacity: 0.5;
+			}
+			
+			.verde
+			{
+				background-color: green; 
+			}
+			.rgb_vermelho
+			{
+				background-color: rgb(255, 0, 0); 			
+			}
+			.rgba_vermelho
+			{
+				background-color: rgb(255, 0, 0, 0.5); 			
+			}
+			.hsl_azul
+			{
+				background-color: hsl(220, 100%, 50%); 			
+			}
+			.hsla_azul
+			{
+				background-color: hsla(220, 100%, 50%, 0.5); 			
+			}
+			.generico
+			{
+				background-color: #ffc;
+			}
+			
+			.l_normal
+			{
+				background-image: linear-gradient(red, blue);
+			}
+			.l_topo
+			{
+				background-image: linear-gradient(to top, red, blue, yellow);
+			}
+			.l_rodape
+			{
+				background-image: linear-gradient(to bottom, red, blue, yellow);
+			}
+			.l_direita
+			{
+				background-image: linear-gradient(to right, red, blue, yellow);
+			}
+			.l_esquerda
+			{
+				background-image: linear-gradient(to left, red, blue, yellow);
+			}
+			.l_topo_direita
+			{
+				background-image: linear-gradient(to top right, red, blue, yellow);
+			}
+			.l_topo_esquerda
+			{
+				background-image: linear-gradient(to top left, red, blue, yellow);
+			}
+			.l_rodape_direita
+			{
+				background-image: linear-gradient(to bottom right, red, blue, yellow);
+			}
+			.l_rodape_esquerda
+			{
+				background-image: linear-gradient(to bottom left, red, blue, yellow);
+			}
+			.l_45graus
+			{
+				background-image: linear-gradient(45deg, red, blue, yellow);
+			}
+			.R_normal
+			{
+				background-image: radial-gradient(red, blue, green);
+			}
+			.R_circle
+			{
+				background-image: radial-gradient(circle, red, blue, green);
+			}
+			.R_elipse
+			{
+				background-image: radial-gradient(ellipse, red, blue, green);
+			}
+			
+		</style>
+	</head>
+	<body>
+
+		<div id="conteudo" name="conteudo">
+			<div id="div_cor" name="div_cor">
+				<select id="cor" name="cor">
+					<option value="VRD">Verde</option>
+					<option value="RGBVM">RGB Vermelho</option>				
+					<option value="RGBAVM">RGBA Vermelho Transparente</option>
+					<option value="HSLBLU">HSL Blue</option>				
+					<option value="HSLABLU">HSLA Azul Transparente</option>
+				</select>
+			</div>
+			
+			<div id="div_gradient" name="div_gradient">
+				<select id="cor_gradient" name="cor_gradient">
+					<option value="L_NORMAL">LINEAR Normal</option>
+					<option value="L_DIR">Para Direita</option>				
+					<option value="L_ESQ">Para esquerda</option>
+					<option value="L_TOPO">Para o Topo</option>				
+					<option value="L_RODAPE">Para o rodape</option>
+					<option value="L_TOPO_DIR">Para o Topo-DIREITA</option>				
+					<option value="L_TOPO_ESQ">Para o Topo-ESQUERDA</option>								
+					<option value="L_RODAPE_DIR">Para o rodape-DIREITA</option>
+					<option value="L_RODAPE_ESQ">Para o rodape-ESQUERDA</option>				
+					<option value="L_45GRAUS">LINEAR 45GRAUS</option>	
+					<option value="R_NORMAL">RADIAL NORMAL</option>					
+					<option value="R_CIRCLE">RADIAL CIRCULO</option>					
+					<option value="R_ELIPSE">RADIAL ELIPSE</option>									
+				</select>
+			</div>
+		</div>	
+	
+		<script>
+			var cor = document.getElementById("cor");
+			var div_cor = document.getElementById("div_cor");
+			var cor_gradient = document.getElementById("cor_gradient");
+			var div_gradient = document.getElementById("div_gradient");
+
+			cor_gradient.addEventListener("change", function()
+										  {
+											div_gradient.setAttribute("class", "");
+											let i = this.selectedIndex;
+											let s = this.options[i].value;
+											let t = this.options[i].text;
+											
+											console.log( s );
+											
+											switch( s )
+											{
+												case 'L_NORMAL': 
+														div_gradient.classList.add("l_normal");
+														break;
+												case 'L_DIR': 
+														div_gradient.classList.add("l_direita");
+														break;
+												case 'L_ESQ': 
+														div_gradient.classList.add("l_esquerda");
+														break;
+												case 'L_TOPO': 
+														div_gradient.classList.add("l_topo");
+														break;
+												case 'L_RODAPE': 
+														div_gradient.classList.add("l_rodape");
+														break;
+												case 'L_TOPO_DIR': 
+														div_gradient.classList.add("l_topo_direita");
+														break;
+												case 'L_TOPO_ESQ': 
+														div_gradient.classList.add("l_topo_esquerda");
+														break;
+												case 'L_RODAPE_DIR': 
+														div_gradient.classList.add("l_rodape_direita");
+														break;
+												case 'L_RODAPE_ESQ': 
+														div_gradient.classList.add("l_rodape_esquerda");
+														break;
+												case 'L_45GRAUS': 
+														div_gradient.classList.add("l_45graus");
+														break;
+												case 'R_NORMAL': 
+														div_gradient.classList.add("R_normal");
+														break;
+												case 'R_CIRCLE': 
+														div_gradient.classList.add("R_circle");
+														break;
+												case 'R_ELIPSE': 
+														div_gradient.classList.add("R_elipse");
+														break;
+												default	: 
+														div_gradient.classList.add("generico");
+														break;
+												
+											}	
+											
+
+										  }
+								);
+								
+
+			
+			
+			cor.addEventListener("change", function()
+										  {
+											div_cor.setAttribute("class", "");
+											let i = this.selectedIndex;
+											let s = this.options[i].value;
+											let t = this.options[i].text;
+											
+											console.log( s );
+											
+											switch( s )
+											{
+												case 'VRD': 
+														div_cor.classList.add("verde");
+														break;
+												case 'RGBVM': 
+														div_cor.classList.add("rgb_vermelho");
+														break;
+												case 'RGBAVM': 
+														div_cor.classList.add("rgba_vermelho");
+														break;
+												case 'HSLBLU': 
+														div_cor.classList.add("hsl_azul");
+														break;
+												case 'HSLABLU': 
+														div_cor.classList.add("hsla_azul");
+														break;
+												default	: 
+														div_cor.classList.add("generico");
+														break;
+												
+											}	
+											
+
+										  }
+								);
+								
+			
+		</script>
+	</body>
+<html>

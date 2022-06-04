@@ -1,0 +1,79 @@
+Aula 05.4 Calc, ViewPort
+========================
+
+.CALC
+	. é uma função, que realiza operações matematicas (soma, subtração, multiplicação e divisão) e retorna um valor
+	sintaxe:
+				calc( <declarações );
+	exemplo:
+				<head>
+					<style>
+						.banner
+						{
+							// usando o calc é tirado a diferença para que não seja necessario a visualização do scrool	
+							// sem o calc o scroll iria aparecer pois a classe "banner" faz com que a div ocupe 100% da altura visivel, ocupando toda a tela mais os 90px do elemento nav
+							height: calc(100vw - 90px);
+							width: 100vh;
+							background-color: red;
+						}
+						
+						nav
+						{
+							height: 90px;
+							width: 100vh;
+							background-color: blue;
+						}
+					</style>
+				</head>
+				<body>
+					<nav></nav>
+					<div class="banner"></div>
+				</body>
+
+
+***NOTA***
+***
+***PARA PODER FAZER COM QUE A PAGINA UTILIZE AS DIMENSÕES DO DISPOSITIVO É USADO O META-DADO "VIEWPORT"
+***COM ESTE META-DADO PODE SER OBTER INFORMAÇÕES DA TELA DO DISPOSITIVO E APLICA-LAS A PAGINA
+***NECESSARIO É DECLARAR ESTE META-DADO NO INICIO DA PAGINA.
+
+***SINTAXE:
+			<meta name="viewport">
+			
+***UMA VEZ QUE FOI DECLARADO O META-DADO, PODE DEFINIR	AS INFORMAÇÕES QUE SERÃO USADAS
+***SINTAXE:
+			<meta name="viewport" content="width=device-width, initisl-scale=1.0">		
+			
+***DEPOIS DE DEFINIDO, É PASSADO PARA O NAVEGADOR QUAL A LARGURA USAR.
+***O ATRIBUTO "CONTENT" DEFINE QUE A LARGURA A SER UTILIZADA É A LARGURA DO DISPOSITIVO QUE ESTA SENDO USADO
+***É ATRAVÉS DO META-DADO "VIEWPORT" QUE SE OBTEM OS DADOS DA TELA DO DIPOSITIVO E ASSIM PODER USA-LOS
+		
+	exemplo:
+				<html>
+					<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+					<head>
+						<style>
+							.banner
+							{
+								// usando o calc é tirado a diferença para que não seja necessario a visualização do scrool	
+								// sem o calc o scroll iria aparecer pois a classe "banner" faz com que a div ocupe 100% da altura visivel, ocupando toda a tela mais os 90px do elemento nav
+								height: calc(100vw - 90px);
+								width: 100vh;
+								background-color: red;
+							}
+							
+							nav
+							{
+								height: 90px;
+								width: 100vh;
+								background-color: blue;
+							}
+						</style>
+					</head>
+					<body>
+						<nav></nav>
+						<div class="banner"></div>
+					</body>
+				</html>	
+
+

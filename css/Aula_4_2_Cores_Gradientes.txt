@@ -1,0 +1,192 @@
+Aula 4.2 - Definir cores e gradiente
+====================================
+
+.BACKGROUND-COLOR
+	. este atributo define a cor de fundo de elemento html
+	. pode receber a cor como: 
+		- nome
+		- valor hexadecimal
+		- pela função rgb
+		- pela função hsl
+		
+	exemplo:	
+				<style>
+					#div_1
+					{
+						background-color: red;
+					}
+					#div_2
+					{
+						background-color: #fcc;
+					}
+					#div_3
+					{
+						background-color: rgb(10, 10, 10);
+					}
+					#div_4
+					{
+						background-color: rgba(10, 10, 10, 0.5);
+					}
+					#div_5
+					{
+						background-color: hsl(10, 10%, 10%);
+					}
+					#div_6
+					{
+						background-color: hsla(10, 10%, 10%, 0.5);
+					}
+				</style>
+				
+.RGB
+	. é uma função que retorna a cor de acordo com os parametros que receber
+	. parametros:
+					1. red		(vermelho)
+					2. green	(verde)
+					3. blue		(azul)
+	. com o valores passados o rgb retirna a cor que atende estes valores				
+	sintaxe:
+				rgb(<tom_vermelho>, <tom_verde>, <tom_azul>);
+	
+.RGBA
+	. tem todas as caracteristicas da função rgb, mas permite colocar o grau de opacidade (opcity)
+	. parametros:
+					1. red		(vermelho)
+					2. green	(verde)
+					3. blue		(azul)
+					4. opacity	(grau de transparencia)
+	sintaxe:
+				rgba(<tom_vermelho>, <tom_verde>, <tom_azul>, <valor_de_opacidade>);
+	
+	
+.HSL
+	. é uma função que retorna a cor de acordo com os parametros que receber
+	. parametros:
+					1. hue			(grau que define o tom da cor. 0 é vermelho, 120 é verde, 240 é azul)
+					2. saturation	(saturação de 0% a 100%)
+					3. lightness		(brilho de 0% a 100%)
+	. com o valores passados o rgb retirna a cor que atende estes valores				
+	sintaxe:
+				hsl(<hue>, <saturation>%, <lightness>%);
+	
+.HSLA
+	. tem todas as caracteristicas da função HSL, mas permite colocar o grau de opacidade (opcity)
+	. parametros:
+					1. hue			(grau que define o tom da cor. 0 é vermelho, 120 é verde, 240 é azul)
+					2. saturation	(saturação de 0% a 100%)
+					3. lightness		(brilho de 0% a 100%)
+					4. opacity		(grau de transparencia)
+	sintaxe:
+				hsla(<hue>, <saturation>%, <lightness>%, <valor_de_opacidade>);
+
+
+.BACKGROUND-IMAGE
+	. este atributo define uma imagem de fundo (que pode ser uma fugura ou um gradiente)  de elemento html
+	. pode receber a cor como: 
+		- pela função linear-gradient
+		- pela função radial-gradient		
+		- pela função url
+		
+	exemplo:	
+				<style>
+					#div_6
+					{
+						background-image: url('<imagem>');
+					}
+					#div_7
+					{
+						background-image: linear-gradient(red, blue);
+					}
+					#div_8
+					{
+						background-image: linear-gradient(to right, red, blue);
+					}
+					#div_9
+					{
+						background-image: linear-gradient(to bottom left, red, blue, yellow);
+					}
+					#div_10
+					{
+						background-image: linear-gradient(45deg, red, blue, yellow);
+					}
+					#div_11
+					{
+						background-image: linear-gradient(45deg, rgba(20, 20, 20, 0.5), blue, yellow);
+					}
+					#div_12
+					{
+						background-image: radial-gradient(red, blue, yellow);
+					}
+					#div_13
+					{
+						background-image: radial-gradient(circle, rgba(20, 20, 20, 0.5), blue, yellow);
+					}
+				</style>
+
+
+
+
+				
+.LINEAR-GRADIENT
+	. é uma função usada para efeito gradient.
+	. esta função exibe as cores de forma linear, quer dizer, sentido para cima, para baixo, esquerda, direita e diagonal
+	. é uma função que tem sobrecarga de parametros. Podendo receber os seguintes cenários de parametros
+	. esta função permite que coloque várias cores para realizar a transição.
+	. a direção padrão é de cima para baixo (to bottom)
+	. parametros 1 :
+					1. cor 1
+					2. cor 2
+					3. cor N
+					(* aqui o direcionamento é vertical do topo para o rodapé)
+					
+	. parametros 2 :
+					1. direcionamento 
+						1.1. to right
+							 - este valor faz com que a transição comece da esquerda para a direita
+						1.2. to left
+							 - este valor faz com que a transição comece da direita para a esquerda
+						1.3. to top
+							 - este valor faz com que a transição comece do rodape para o topo
+						1.4. to bottom
+							 - este valor faz com que a transição comece do topo para o rodape
+						1.5. to top left
+							 - este valor faz com que a transição comece da direita para a esquerda, apontando para cima (efeito diagonal)						
+						1.6. to top right
+							 - este valor faz com que a transição comece da esquerda para a direita, apontando para cima (efeito diagonal)
+						1.7. to bottom left
+							 - este valor faz com que a transição comece da direita para a esquerda, apontando para baixo (efeito diagonal)						
+						1.6. to bottom right
+							 - este valor faz com que a transição comece da esquerda para a direita, apontando para baixo (efeito diagonal)
+						1.7. <angulos>		
+							 - define um valor (numero) depois coloca-se 'deg'
+							 exemplo: 80deg
+					2. cor 1
+					3. cor 2
+					4. cor N
+	sintaxe:
+				linear-gradient(red, blue);
+				linear-gradient(to top, red, blue);				
+				linear-gradient(50deg, red, blue, green);		
+
+RADIAL-GRADIENT
+	. é uma função usada para efeito gradient.
+	. a base é o centro para esta função, quer dizer, o efeito é circular (ou elipitica).
+	. é uma função que tem sobrecarga de parametros. Podendo receber os seguintes cenários de parametros
+	. esta função permite que coloque várias cores para realizar a transição.
+	. parametros 1 :
+					1. cor 1
+					2. cor 2
+					3. cor N
+					
+	. parametros 2 :
+					1. <formato>
+						1.1. circle
+							 - faz com que a visualização seja de forma circular
+						1.2. ellipse
+							 - faz com que a visualização seja de forma elipitca
+					2. cor 1
+					3. cor 2
+					4. cor N
+
+*** NOTA
+*** A FUNÇÃO GRADIENTE SÓ É POSSIVEL USANDO A PROPRIEDADE CSS [BACKGROUND-IMAGE] JUNTAMENTE COM AS FUNÇÕES [LINEAR-GRADIENT] E [RADIAL-GRADIENT] 
+	

@@ -1,0 +1,141 @@
+Aula 13 - Divs Semanticas
+=======
+
+. com as divs semanticas, os buscadores veem com maior facilidade o conteudo descrito da pagina
+. elas servem para uma melhor organização das informações contidas dentro da página html
+
+. HEADER
+
+	. esta tag é usada para identificar o cabeçalho do conteudo da página
+	. geralmente, menus de navegação são colocadas nesta area
+	sintaxe:
+				<header></header>
+
+
+. NAV
+
+	. esta tag é usada para identificar a area de navegação dos cabeçalhos (header)
+	. geralmente, esta tag é encontrada dentro do <header>
+	sintaxe:
+				<nav></nav>
+	exemplo:
+				<header>
+					<nav>
+						<a href="#">Link1</a>
+						<a href="#">Link2</a>
+						<a href="#">Link3</a>						
+					</nav>
+				</header>
+
+
+. MAIN
+
+	. esta tag é usada para identificar o corpo principal da página
+	. geralmente, vem depois da tag <header>
+	sintaxe:
+				<main></main>
+
+
+. SECTION
+
+	. esta tag é usada para identificar uma seção do corpo principal da página
+	. geralmente, é localizada dentro da tag <main>
+	sintaxe:
+				<scetion></section>
+				
+	exemplo:
+				<main>
+					<section id="esporte">
+					</section>
+					<section id="saude">
+					</section>
+				</main>
+
+
+. ARTICLE
+
+	. esta tag é usada para identificar um artigo/publicação/assunto/noticia do corpo principal da página
+	. geralmente, é localizada dentro da tag <section>
+	sintaxe:
+				<article></article>
+				
+	exemplo:
+				<main>
+					<section id="esporte">
+						<article>
+							<h2>Palmeiras Campeão</h2>
+							<p>bla bla</p>
+						</article>
+						<article>
+							<h2>Volei Brailseiro em Alta</h2>						
+							<p>bla bla</p>							
+						</article>
+					</section>
+					<section id="saude">
+						<article>
+							<h2>Cura do cancer</h2>
+							<p>bla bla</p>
+						</article>
+						<article>
+							<h2>Cura do Covid-19</h2>						
+							<p>bla bla</p>							
+						</article>
+					</section>
+				</main>
+
+
+. ASIDE
+	. esta tag é usada para identificar um conteudo ao lado de um artigo (article), ou seção (setction), ou do conteudo principal (main) da página
+	. seu objetivo é de dar o sentido de que se trata de um conteudo lateral.
+	sintaxe:
+				<aside></aside>
+	exemplo:
+				<main>
+					<section id="esporte">
+						<article>
+							<h2>Palmeiras Campeão</h2>
+							<p>bla bla</p>
+						</article>
+						<article>
+							<h2>Volei Brailseiro em Alta</h2>						
+							<p>bla bla</p>							
+						</article>
+					</section>
+					<section id="saude">
+						<article>
+							<h2>Cura do cancer</h2>
+							<p>bla bla</p>
+						</article>
+						<article>
+							<h2>Cura do Covid-19</h2>						
+							<p>bla bla</p>							
+						</article>
+					</section>
+					<aside>
+						<a link="#">Trabalho 1</a>
+						<a link="#">Trabalho 2</a>
+						<a link="#">Trabalho 3</a>						
+					</aside>
+				</main>
+				<aside>
+					<a link="#">Outro 1</a>
+					<a link="#">Outro 2</a>
+					<a link="#">Outro 3</a>						
+				</aside>
+
+
+. FOOTER
+
+	. esta tag é usada para identificar o conteudo do rodapé de uma página
+	sintaxe:
+				<footer></footer>
+
+	exemplo:
+				<header>
+				</header>
+				<main>
+				</main>
+				<footer>
+					<p>Teste Footer</p>
+				</footer>
+				

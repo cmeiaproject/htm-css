@@ -1,0 +1,272 @@
+Aula 2.2 - ATRIBUTOS DO TEXTO
+=============================
+
+.COLOR
+	. defina a cor do texto
+	exemplo:
+				<head>
+					<style>
+						*
+						{
+							color: blue; // define que todos os textos da página terão a cor azul
+						}
+						h1
+						{
+							color: red; // define que todos os textos dos elememtos H1 terão a cor vermelha
+						}
+						h2
+						{
+							color: green; // define que todos os textos dos elememtos H2 terão a cor verde
+						}
+					</style>
+				</head>
+	
+.TEXT-ALIGN
+	. defina a orientação do texto
+	. este atributo define qual o alinhamento do texto do elemento html:
+	  - esquerda (left)
+	  - centro (center)
+	  - direita (right)
+	  - justify (justificado), quer dizer, alinha o texto de tal forma que faça ocupar o maximo de espaço que puder.
+	. o alinhamento do texto é em relação onde se encontra. 
+		exemplo:
+					Se o texto se encontra dentro de um container como div, table etc, o texto será alinhado dentro deste containar
+					Mas, se o texto não estiver dentro de um container, mas somente no BODY da página, será em relação ao BODY
+					que será alinhado.
+	exemplo:
+				<head>
+					<style>
+						*
+						{
+							text-align: left; // define que todos os etxtos da pagina estarão alinhados para esquerda
+						}
+						h1
+						{
+							text-align: center; // define que todos os textos dos elementos h1 serão alinhados para o centro
+						}
+						h2
+						{
+							text-align: right; // define que todos os textos dos elementos h2 serão alinhados para a direita
+						}
+						#texto8
+						{
+							text-align: justify; // define que todos os textos dos elementos da div#texto8 serão justificados
+						}
+						#texto9
+						{
+							text-align: right;
+						}
+					</style>
+				</head>
+				<body>
+					<p>Teste de alinhamento a esquerda
+					<h1>teste alinhamento para o centro
+					<h2>Teste de alinhamento a direita
+				</body>
+				
+.TEXT-DECORATION
+	. este atributo coloca um traço no texto do elemento html:
+	  - underline (traço debaixo do texto)
+	  - overline (traço acima do texto)
+	  - line-through (traço cortando o texto)
+	  - none: (tira o traço)
+	. o atributo permite receber mais valores, 
+	   por exemlpo: 
+					text-decoaration: underline overline;
+					text-decoaration: underline overline dotted red;
+	   
+				
+	  (o NONE é usado para tirar o traço dos links do HREF)
+	
+	exemplo:
+				<head>
+					<style>
+						*
+						{
+							text-decoration: none;
+						}
+						h1
+						{
+							text-decoration: underline;
+						}
+						h2
+						{
+							text-decoration: libe-through;
+						}
+						#texto9
+						{
+							text-decoration: line-through;
+						}
+					</style>
+				</head>
+				<body>
+					<p>Teste de alinhamento a esquerda
+					<h1>teste alinhamento para o centro
+					<h2>Teste de alinhamento a direita
+					<a href="#">Clique aqui</a>
+				</body>
+				
+*** NOTA
+*** O TEXT-DECORATION ALÉM DE RECEBER O PARAMETRO QUE DEFINE POR ONDE PASSA O RISCO, TAMBÉM DEFINE A COR E O ESTILO
+*** EXEMPLO:
+			text-decoration: underline dotted red;
+							 |			|	  |- cor
+							 |			|- estilo
+							 |- por onde passa o risco no texto
+
+.TEXT-DECORATION-COLOR							 
+	. este atributo define a cor do traço no texto do elemento html:
+	sintaxe:
+			text-decoration-color: red;
+
+	
+.TEXT-DECORATION-LINE
+	. este atributo coloca um traço no texto do elemento html:
+	  - underline (traço debaixo do texto)
+	  - overline (traço acima do texto)
+	  - line-through (traço cortando o texto)
+	  - none: (tira o traço)
+	sintaxe:
+			text-decoration-line: underline overline;
+
+
+.TEXT-DECORATION-STYLE
+	. este atributo define o estilo do traço no texto do elemento html:
+	sintaxe:
+			text-decoration-style: [<solid>, <wavy>, <dotted>, <dashed>, <double>]; 
+	
+	
+.TEXT-TRANSFORM
+	. este atributo faz com que o texto de um elemento seja alterado. Pode fazer:
+	- deixar todas as letras em maiusculo (uppercase)
+	- deixar todas as letras em minusculo (lowercase)	
+	- deixar que todas as primeiras letras de cada palavra estejam em maiusculo (capitalize)		
+	
+	exemplo:
+				<head>
+					<style>
+						*
+						{
+							text-transform: lowercase;
+						}
+						h1
+						{
+							text-trasnform: uppercase;
+						}
+						#texto9
+						{
+							text-transform: capitalize;
+						}
+					</style>
+				</head>
+	
+.TEXT-INDENT	
+	. este atributo faz com que a primeira linha de um texto tenha uma distancia em relação a margem esquerda.
+	sintaxe:
+				text-indent: <valor>;
+
+	exemplo:
+				<head>
+					<style>
+						*
+						{
+							text-indent: 10px;
+						}
+						#texto9
+						{
+							text-indent: 20px;
+						}
+					</style>
+				</head>
+
+
+.LINE-HEIGHT
+	. este atributo define a altura das linhas de um texto
+	sintaxe:
+				line-height: <valor>;
+
+	exemplo:
+				<head>
+					<style>
+						*
+						{
+							line-height: 10px;
+						}
+						#texto9
+						{
+							line-height 20px;
+						}
+					</style>
+				</head>
+	
+.DIRECTION
+	. este atributo define a direção do texto se é lido da direito-para-esquerda ou da esquerda-para-direita
+	sintaxe:
+				direction: rtl; // direita para esquerda
+				direction: ltr; // esquerda para direita (padrão)
+				
+	exemplo:
+				<head>
+					<style>
+						#texto4
+						{
+							direction: rtl
+						}
+						#texto5
+						{
+							direction: ltr;
+						}
+					</style>
+				</head>
+				
+				
+.LETTER-SPACING
+	. este atributo define o espaçamento entre as letras de um texto
+	exemplo:
+				<head>
+					<style>
+						#texto3
+						{
+							letter-spacing: 5px;
+						}
+					</style>
+				</head>
+
+.WORD-SPACING
+	. este atributo define o espaçamento entre as palavras de um texto
+	exemplo:
+				<head>
+					<style>
+						#texto1
+						{
+							word-spacing: 5px;
+						}
+					</style>
+				</head>
+	
+.TEXT-SHADOW	
+	. esta propriedade adiciona sombra ao texto.
+	sintaxe:
+				text-shadow: [<posicao_horizontal_da_sombra>] [<posicao_vertical_da_sombra>] [<valor_desfoque>] [cor_da_sombra>]
+				texc-shadow: [<posicao_horizontal_da_sombra>] [<posicao_vertical_da_sombra>] [cor_da_sombra>]				
+				
+	(o parametro onde se define o desfoque (ou blur) não é obrigatório)
+
+	exemplo:
+				<head>
+					<style>
+						h1
+						{
+							text-shadow: 3px 3px 5px red;
+						}
+						h2
+						{
+							text-shadow: 3px 3px red;
+						}
+						
+					</style>
+				</head>
+	
+*** NOTA
+*** OS VALORES DAS POSIÇÕES HORIZONTAIS E VERTICAIS É EM RELAÇÃO AO TEXTO QUE SE QUER FAZER SOMBRA				
+

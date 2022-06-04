@@ -1,0 +1,22 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+main
+{
+	background-image: url('../arquivos/imagens/espaco.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+}
+
+img
+{
+	display: block;
+	padding-top: 70px;
+	margin: auto;
+}
+

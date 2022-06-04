@@ -1,0 +1,63 @@
+Aula 2 - Flex-Wrap, Flex-Direction e Flex-Flow
+======
+
+***NOTA	
+***OS ATRIBUTOS ABAIXO SÃO USADOS NO CONTAINER
+	
+. FLEX-WRAP
+	
+	. é um atributo usado para fazer com que os itens do container flex, quebrem a linha, quer dizer, vá para a linha abaixo.
+	sintaxe: 
+				flex-wrap: [nowrap/wrap/wrap-reverse];
+		
+	. este atributo recebe 2 (dois) valores:
+		- nowrap
+		- wrap
+		- wrap-reverse
+	. por padrão, ao definir que o container é flex, o atributo [FLEX-WRAP] adota o valor [NOWRAP], fazendo com que os itens do container continuem sempre na mesma linha, esmo que a quantidade de itens venha a extrapolar o tamanho do container.
+	. para que os itens não saiam dos limites do container, é necessário definir este atributo com o valor [WRAP].
+	. o valor [WRAP-REVERSE] faz a quebra de linha, mas faz da ulltima linha para a primeira
+	exemplo:
+				section
+				{
+					display: flex;
+					flex-wrap: wrap;
+				}
+		
+		
+. FLEX-DIRECTION
+
+	. este atributo define a direção que os itens do container irão assumir.
+	. define se a direção é por linha ou coluna.
+	. se for por linha, os itens serão organizados na linha. Quer dizer, ficarão todos na mesma linha. Os itens começam a ser alinhados pelo topo
+	. se for por coluna, os itens serão organizados por coluna. Quer dizer, ficarão todos na mesma coluna. Os itens começam a ser alinhados pela esquerda
+	. estes são os valores que recebe
+		- row
+		- column
+		- reverse-row
+		- reverse-column
+	sintaxe:
+				flex-direction: [row/column/reverse-row/reverse-column];
+				
+	(os valores [REVERSE-ROW] e [REVERSE-COLUMN] fazem a mesma coisa que o [ROW] e [COLUMN] respectivamente.
+	A diferença é que, a exibição dos itens é feita de ordem invertida, quer dizer, do ultimo para o primeiro)
+
+	exemplo:
+				.container-mobile-display
+				{
+					display: flex;
+					flex-direction: column;
+				}	
+				
+				.container-normal-display
+				{
+					display: flex;
+					flex-direction: row;
+				}
+	
+				
+. FLEX-FLOW
+
+	. em vez de usar os atributos [FLEX-WRAP] e [FLEX-DIRECTION], é só usar este atributo que ele faz a mesma coisa que estes dois mencionados.
+	sintaxe:
+				flex-flow: [row/column/row-reverse/column-reverse] [nowrap/wrap/wrap-reverse];

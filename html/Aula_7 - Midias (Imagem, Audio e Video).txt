@@ -1,0 +1,201 @@
+Aula 7 - Midias (imagem, audio e video)
+======
+
+. PICTURE
+	. esta tag permite que o navegador exiba uma imagem que se melhor adpte as dimensões de visulazação
+	. o seu objetivo é fazer com que a melhor umagem seja exibida, de acordo com o dispositivo que esteja visualizando a pagina, ex (celulares, tablets, computadores, tv e etc).
+	. uma imagem feita para ser exibida em uma tela de computador, é muito grande para ser exibida em um celular, e esta tag estara tratando deste problema, para que, seja exibida uma imagem de acordo com as dimensões do dispositvo que esta visualizando a pagina.
+	
+	sintaxe:
+				<picture>...</picture>
+				
+	exemplo:
+				<picture>
+					<img src="imagem-grande.jpg" alt="exibira uma imagem grande" />
+				</picture>
+				
+				. neste exemplo o que sera exibido é o que se encontra na tag <umg>.
+				. em tela de dispositivos grandes, a umagem não tera problemas de ser exibida, mas em dispositivos menores, a umagem ira será exibida com as barras de rolagens.
+				
+.SOURCE
+	. esta tag permite a manipulação da midia (imagem, som e etc)
+	
+	.ATRIBUTOS
+		.MEDIA
+			. este atributo define informações como tamanho da midia para sua exibição
+			sintaxe:
+						<source media = "(<conteudo>)" />
+							
+			. valores que este atributo recebe:				
+				1. max-width;
+				2. min-width;
+			. is valores são colocados entre paranteses	
+				
+
+			exemplo:
+						<source media = "(max-width: 1000px)" />				
+						. o exemplo acima identifica que uma ação deve ser tomada quando a area de visualização tenha no maximo até 1000px de largura	
+						
+						<source media = "(min-width: 100px)" />				
+						. o exemplo acima identifica que uma ação deve ser tomada quando a area de visualização tenha no minimo 100px de largura	
+			
+		.SRCSET	
+			. este atributo identifica o arquivo (imagem)
+			. é usado para imagens
+			sintaxe:
+							<source srcset = "<conteudo>" />
+			
+		.TYPE
+			. este atributo identifica o tipo da midia (imagem, audio e etc)
+			sintaxe:
+							<source type = "<conteudo>" />
+							
+			. valores que este atributo recebe:				
+				1. image;
+				2. audio;
+				3. video;
+				
+			exemplo:
+						<source type = "image/<tipo da imagem>" />
+						<source type = "audio/<tipo do audio>"/>
+						<source type = "video/<tipo do video>"/>
+						
+		.SRC	
+			. este atributo identifica o arquivo (audio ou video)
+			. é usado para imagens
+			sintaxe:
+							<source src = "<conteudo>" />
+						
+
+. exemplo usando PICTURE e SOURCE
+
+	1. <picture>
+	2.		<source media="(max-width:300px)" srcset="imagem-pequena.jpg" type="image/jpg" />
+	3.		<source media="(max-width:1000px)" srcset="imagem-media.jpg" type="image/jpg" />		
+	4.		<img src="imagem-grande.jpg" alt="exibira uma imagem grande" />		
+	5. </picture>
+	
+	O que esta acontecendo?
+	- no código acima, é dito ao navegador o que fazer, para que a imagem seja exibida em diversos tipos de dispositivos.
+	- a umagem a ter preferencia em ser exibida, é a umagem descrita na tag <img> (linha 4)
+	- mas, com o uso da tag <source>, o navegador ira considerar o que esta tag traz de informação.
+	- na linha 2, esta comelando pela menor resolução, e caso esta condição seja verdadeira, o navegador ira exibir o que esta definido no atributo [SRCSET] da tag <source>
+	- na realidade, o que é feito da linha 2 até a lunha 4, é como se fosse uma condição:
+		- se a resolução for no maximo até 300px, então exiba a imagem "imagem-pequena.jpg"
+		- senão, se a resolução for no maior do que 300px, mas até no maximo 1000px, então exiba a imagem "imagem-media.jpg"
+		- caso não seja nenhuma das anteriores, exibir a imagem "imagem-grande.jpg"
+
+*** NOTA
+*** AO USAR O SOURCE, É BOM COMEÇAR DO MENOR PARA O MAIOR, OU VICE-VERSA.
+*** NÃO USAR O SOURCE COM AS DEFINIÇÕES FORA DE ORDEM, POIS O NAVEGADOR PODE ACABAR EXIBINDO UMA IMAGEM QUE NÃO É ADEQUADA PARA AQUELA RESOLUÇÃO.
+
+. AUDIO
+	. esta tag tem como objetivo fazer com que um ou varios audios sejam inseridos na pagina.
+	sintaxe:
+				<audio>...</audio>
+				
+	. ATRIBUTOS	
+		. AUTOPLAY
+			- tem como objetivo fazer com que o audio seja executado automaticamente, quando a pagina for carregada.
+			sintaxe:
+						<audio autoplay>...</audio>
+			
+		. CONTROLS	
+			- exibe na pagina, os controle de audio
+			sintaxe:			
+						<audio controls>...</audio>			
+			
+		. SRC
+			- este atributo identifica o arquivo que contem o audio
+			sintaxe:			
+						<audio src="<arquivo_audio>">...</audio>	
+
+		. LOOP
+			- este atributo serve para quando o audio terminar, voltar para o começo e executar novamente o audio
+
+			sintaxe:			
+						<audio loop>...</audio>	
+						
+		.PRELOAD
+			- usado para fazer o carregamento de dados do audio
+			- este atributo recebe os seguintes valores:
+				1. auto (padrão)
+					- esta opção faz com que o arquivo de audio seja todo carregado, juntamente com a pagina html. E, isso pode comprometer a performance da pagina. POis, se for um arquivo garnde faz com que a pagina demore a ser carregada.
+				2. metadata
+					- esta opção só carrega informações do audio, como tempo de duração, nome do arquivo, data e etc.
+				3. none
+					- não carrega nenhuma informação do audio
+			
+	exemplo 1:
+				<audio src="musica.mp3" controls autoplay></audio>
+				
+	exemplo 2:
+				1.	<audio preload="metadata" controls>
+				2.		<source src="musica.mp3" type="audio/mp3" />
+				3.		<source src="musica.ogg" type="audio/ogg" />
+				4.		<source src="musica.wav" type="audio/wav" />
+				5.		<p>não foi possuvel executar o audio, seu navegador não tem 	suporte para ouvir este audio. Clique aqui <a href="musica.mp3">Baixar arquivo</a></p>
+				6.	</audio>
+				
+				- O que esta acontecendo?
+					- o navegador ura seguir o fluxo das instruções acima, verificará se são verdadeiras, e caso seja, ira executar e sair, mas caso não seja, passará para proxima instrução (linhas 2 a 4)
+					- caso nenhuma instrução seja satisfatoria (arquivo não existe, ou o navegador não consegue executar o audio), a instrução da linha 5 sera executada.
+					
+
+. VIDEO
+	. esta tag tem como objetivo fazer com que um ou varios videos sejam inseridos na pagina.
+	sintaxe:
+				<video>...</video>
+				
+	. ATRIBUTOS	
+		. AUTOPLAY
+			- tem como objetivo fazer com que o video seja executado automaticamente, quando a pagina for carregada.
+			sintaxe:
+						<video autoplay>...</video>
+	
+		. POSTER
+			- este atributo permite colocar uma capa de video, uma imagem. Um ThumbNail
+			sintaxe:
+						<video poster="<atquivo_imagem>"></video>
+			
+		. CONTROLS	
+			- exibe na pagina, os controle de video
+			sintaxe:			
+						<video controls>...</video>			
+			
+		. SRC
+			- este atributo identifica o arquivo que contem o video
+			sintaxe:			
+						<video src="<arquivo_audio>">...</video>			
+					
+		. LOOP
+			- este atributo serve para quando o video terminar, voltar para o começo e executar novamente o video
+			sintaxe:			
+						<video loop>...</video>	
+
+	exemplo 1:
+				<video src="video.mp4" controls autoplay></video>
+				
+	exemplo 2:
+				1.	<video autoplaey controls>
+				2.		<source src="video.mp4" type="video/mp4" />
+				3.		<source src="video.ogg" type="video/ogg" />
+				4.		<source src="video.webm" type="video/webm" />
+				5.		<p>não foi possivel executar o video, seu navegador não tem	suporte para exibir este video. Clique aqui <a href="video.mp4">Baixar arquivo</a></p>
+				6.	</video>
+				
+				- O que esta acontecendo?
+					- o navegador ura seguir o fluxo das instruções acima, verificará se são verdadeiras, e caso seja, ira executar e sair, mas caso não seja, passará para proxima instrução (linhas 2 a 4)
+					- caso nenhuma instrução seja satisfatoria (arquivo não existe, ou o navegador não consegue executar o video), a instrução da linha 5 sera executada.
+					
+*** NOTA
+*** UTILIZANDO A TAG <VIDEO>, O CONSUMO DE BANDA É MAIOR, PORQUE OS VIDEOS ESTÃO HOSPEDADOS LOCALMENTE
+*** QUER DIZER, OS VIDEOS ESTÃO NO SERVIDOR ONDE ESTA O SITE.
+*** ISTO PODE FAZER COM QUE O CUSTO SEJA ALTO
+*** PARA RESOLVER ESTE PROBLEMA, É ACONSELHAVEL USAR SERVIDORES DE STREAMS
+*** USAR OS VIDEOS DESTAS PLATAFORMAS (YOUTUBE, VIMEO E ETC) E INCORPORAR A PAGINA
+*** DESTA FORMA, NÃO HAVERA CONSUMO DE BANDA DO SITE, POIS ESTARA USANDO O VIDEO QUE ESTA HOSPEDADO EM OUTRO LUGAR.
+*** ISTO DIMINUI E MUITO O CUSTO
+*** NESTAS PLATAFORMAS, SÃO DISPONIBILIZADOS MEIOS QUE PERMITEM QUE OS VIDEOS SEJAM INCORPORADOS NO SITE.
+*** EXEMPLO, O YOUTUBE, TEM A OPÇÃO DE INCORPORAR O CÓDIGO DOS VIDEOS, NO CODIGO DO SITE.
+

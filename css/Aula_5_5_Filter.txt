@@ -1,0 +1,54 @@
+Aula 05.5 Filter
+========================
+
+.FILTER
+	. é um atributo que introduz efeitos em elemento html
+	. recebe os seguintes valores:
+		1. blur()
+			- função que recebe valores em porcentagem (0%..100%)
+			- desfoca o elemento
+		2. brightness()
+			- função que recebe valores em porcentagem (0%..100%)
+			- insere brilho no elemento
+		3. contrast()
+			- função que recebe valores em porcentagem (0%..100%)
+			- insere contraste no elemento
+		4. grayscale()
+			- função que recebe valores em porcentagem (0%..100%)
+			- insere escalas de cinza no elemento (pode deixar uma imagem preto e branco)
+		5. invert()
+			- função que recebe valores em porcentagem (0%..100%)
+			- inverte as cores do elemento
+		6. opacity()
+			- função que recebe valores em porcentagem (0%..100%)
+			- insere transparência no elemento
+		7. saturate()
+			- função que recebe valores em porcentagem (0%..100%)
+			- insere aturação no elemento
+		7. sepia()
+			- função que recebe valores em porcentagem (0%..100%)
+			- insere o efeito sepia no elemento
+		8. hue-rotate()			
+			- função que recebe valores em graus (0deg..360deg)
+			- vai mudando a cor do elemento dependendo do grau de visão definido
+		9. drop-shadow()						
+			- função que recebe quatro parametros
+				- offset-horizontal (em pixel)
+				- offset-vertical (em pixel)
+				- desfoque (em pixel)
+				- cor
+			- insere uma sombra no elemento	
+	. o filter pode receber mais do que um filtro
+	exemplo:
+				<head>	
+					<style>
+						img
+						{
+							filter: drop-shadow(10px 10px 5px #000) grayscale(50%);
+						}
+					</style>
+				</head>
+				<body>
+					<img src="foto.jpg" />
+				</body>
+	

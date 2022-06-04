@@ -1,0 +1,48 @@
+Aula 1.1 - Modo de aplicar o CSS no HTML
+========================================
+
+1a. Forma
+	. usando a propriedade STYLE do elemento html
+	. o exemplo abaixo esta atribuindo ao elemento(tag) <p> a largura de 100px, fazendo com que este paragrafo tenha uma largura de 100px
+	exemplo:
+				<body>
+					<p style="width:100px;"></p>
+				</body>
+				
+
+2a. Forma
+	. declarando STYLE como uma seção a parte
+	sintaxe:	<style>
+					declarações
+				</style>
+				
+	. a seção style é comumente colocada dentro do head, assim no carregamento da pagina o estilo já é carregado e os elementos assumem
+	  suas propriedades de estilo	
+	. o exemplo abaixo mostra a seção <style> sendo declarada a parte no código html
+	exemplo:
+				<head>
+					<style>
+						#teste
+						{
+							height: 100px;
+							width: 100px;
+						}
+					</style>
+				</head>
+				<body>
+					<div id="teste"></div>
+				</body>
+
+3a. Forma
+	. acessar o css através de um arquivo externo, e para isso é usado a tag LINK
+	sintaxe:	
+				<link rel="stylesheet" href="<caminho_do_arquivo_css>" />
+	
+	. a seção style é comumente colocada dentro do head, assim no carregamento da pagina o estilo já é carregado e os elementos assumem
+	  suas propriedades de estilo	
+	. o exemplo abaixo mostra a seção <style> sendo declarada a parte no código html
+	exemplo:
+				<head>
+					<link rel="stylesheet" href="<caminho_do_arquivo_css>" />				
+				</head>
+

@@ -1,0 +1,15 @@
+Aula 1 - Flex
+======
+
+. FLEX
+
+	. usado no css, define a forma como as caixas (box) serão visualizadas na página.
+	. para definir o modo de exibição do elemento seja FLEX, é colocado no atributo DISPLAY
+	exemplo:
+				display: flex;
+				
+	. quando um container é definido como flex, todos os itens se tornam flex (chamados de flex-itens)
+	. por padrão, quando definido que a exibição do container é Flex, os itens ficam alinhados na mesma linha, a esquerda.
+	. este comportamento é semelhante ao float: left;
+
+	

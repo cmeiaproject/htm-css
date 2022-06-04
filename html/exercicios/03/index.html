@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<title>Checkboxes</title>
+		
+		<script>
+			let chkTodos;
+			let checkboxes;
+			let btn;
+			let para;
+			
+			function PegarStatusCheckboxTodos(e)
+			{
+				for(let i = 0; i < checkboxes.length; i++)
+				{
+					if (checkboxes[i].id != 'todos')
+					{
+						checkboxes[i].checked = e.target.checked;
+					}
+				}
+				
+			}
+			
+			function EstelizarParagrafos()
+			{
+				alert(para.length);
+				for(let i = 0; i < para.length; i++)
+				{
+					para[i].style.Color = red;
+				}
+			
+			}
+			
+			
+			window.addEventListener('load', () => {
+														chkTodos = document.getElementById('todos');
+														btn = document.getElementById('btn');														
+														checkboxes = document.getElementsByTagName('input');														
+														chkTodos.addEventListener('change', PegarStatusCheckboxTodos);
+														para = document.getElementsByTagName('div > p');																												
+														btn.addEventListener('click', EstelizarParagrafos);
+												   }
+									 );
+		</script>
+	</head>
+	<body>
+		<h1>Checkboxes</h1>
+		<h2>Lista de Checkboxes</h2>
+		<div>
+			<button id='btn'>Estelizar</button>
+		</div>
+		<p>Abaixo escolha os itens que desejar</p>
+		<div>
+			<div>
+				<input type="checkbox" id="todos" value="todos"/>
+				<label for="todos">todos</label>
+			</div>
+			<div>
+				<input type="checkbox" id="primeiro" name ="primeiro" value="primeiro"/>
+				<label for="primeiro">primeiro</label>			
+				<input type="checkbox" id="segundo" value="segundo"/>			
+				<label for="segundo">segundo</label>			
+				<input type="checkbox" id="terceiro" value="terceiro"/>			
+				<label for="terceiro">terceiro</label>			
+			</div>	
+			<div>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,</p>
+			</div>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,</p>
+				
+		</div>
+	</body>
+</html>

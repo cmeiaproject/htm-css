@@ -1,0 +1,118 @@
+Aula 1.3 - ATRIBUTOS - DIMENSOES
+================================
+
+.HEIGHT
+	. define uma altura (fixa ou variavel) para o elemento html
+	sintaxe:
+				height: <valor>;
+				
+.MAX-HEIGHT				
+	. define a altura máxima (fixa ou variavel) para o elemento html
+	. se o valor definido no atributo HEIGHT for maior do que atributo o MAX-HEIGHT, a largura adotada será a que foi definida
+	pelo atributo MAX-HEIGHT
+	sintaxe:
+				max-height: <valor>;
+				
+.MIN-HEIGHT				
+	. define a altura minima (fixa ou variavel) para o elemento html
+	. se o valor definido no atributo HEIGHT for menor do que atributo o MIN-HEIGHT, a largura adotada será a que foi definida
+	pelo atributo MIN-HEIGHT
+	sintaxe:
+				min-height: <valor>;
+
+.WIDTH
+	. define uma largura (fixa ou variavel) para o elemento html
+	sintaxe:
+				width: <valor>;
+				
+.MAX-WIDTH
+	. define a largura máxima (fixa ou variavel) para o elemento html
+	. se o valor definido no atributo WIDTH for maior do que atributo o MAX-WIDTH, a largura adotada será a que foi definida
+	pelo atributo MAX-WIDTH
+	sintaxe:
+				max-width: <valor>;
+
+.MIN-WIDTH
+	. define a largura minima (fixa ou variavel) para o elemento html
+	. se o valor definido no atributo WIDTH for menor do que atributo o MIN-WIDTH, a largura adotada será a que foi definida
+	pelo atributo MIN-WIDTH
+	sintaxe:
+				max-width: <valor>;
+
+*** NOTA			
+***	O VALOR PODE SER EM PORCENTAGEM OU PIXELS
+***	EM PORCENTAGEM, 0 VALOR É CALCULADO. POIS PEGA A PORCENTAGEM DA DIMENSÃO (ALTURA OU LARGURA) DA AREA ONDE ESTA O ELEMENTO HTML
+*** EM PIXEL, O VALOR É FIXO. O ELEMENTO TEM SUAS DIMENSÕES FIXAS
+
+	exemplo:
+				<head>
+					<style>
+						#conteudo_variavel
+						{
+							color: red;
+						}
+						#conteudo_fixo
+						{
+							color: green;
+							width: 80%;
+							max_width: 500px;
+						}
+					</style>
+				</head>
+				<body>
+					<div id="conteudo_variavel">
+"O diabo que acabar com os velhos"
+
+Uma sociedade onde não há o respeito não há o amor, e onde não há o amor não há o respeito!
+
+"Quando ouviram isto, redargüidos da consciência, saíram um a um, a começar pelos mais velhos até aos últimos; ficou só Jesus e a mulher que estava no meio." (João 8:9)
+
+Geralmente, este texto trata da mulher que seria apedrejada, mas quero colocar um outro ponto... os mais velhos que estavam nesta narrativa da palavra de Deus
+
+"...a COMEÇAR pelos mais VELHOS até aos últimos...", o interessante aqui  é que os mais velhos é que deram a iniciativa, deram o exemplo a ser seguido! Só no final é que os mais novos começaram a soltar as pedras!
+
+Os primeiros a ouvir a consciência foram os mais velhos, e essa atitude reforçou a atitude dos mais novos a fazerem o mesmo!
+Uma sociedade sem referência, é uma sociedade perdida!
+
+No dias atuais, como seria uma situação como esta? Onde o publico ali presente tivesse a mesma consciência que tem hoje, onde o certo é o errado e o errado é o certo! Será que soltariam as pedras? 
+
+"O diabo que acabar com os velhos"
+
+A palavra de Deus fala de um rei chamado Joás que nos dias do sacerdote Joiada ainda estava vivo fez o que era reto aos olhos de Deus, mas quando este morreu, o rei passou a fazer o que era mau.
+
+Os de mais idade que guardam os valores morais saudáveis são uma preciosa referência para o mais mais jovens, para a próxima geração. Pelo fato de possuírem algo que riqueza do mundo alguma compra, conhecimento e experiência de vida!
+Experiência que conhecem os danos de uma decisão mal tomada!
+					</div>							
+					<div id="conteudo_fixo">
+"O diabo que acabar com os velhos"
+
+Uma sociedade onde não há o respeito não há o amor, e onde não há o amor não há o respeito!
+
+"Quando ouviram isto, redargüidos da consciência, saíram um a um, a começar pelos mais velhos até aos últimos; ficou só Jesus e a mulher que estava no meio." (João 8:9)
+
+Geralmente, este texto trata da mulher que seria apedrejada, mas quero colocar um outro ponto... os mais velhos que estavam nesta narrativa da palavra de Deus
+
+"...a COMEÇAR pelos mais VELHOS até aos últimos...", o interessante aqui  é que os mais velhos é que deram a iniciativa, deram o exemplo a ser seguido! Só no final é que os mais novos começaram a soltar as pedras!
+
+Os primeiros a ouvir a consciência foram os mais velhos, e essa atitude reforçou a atitude dos mais novos a fazerem o mesmo!
+Uma sociedade sem referência, é uma sociedade perdida!
+
+No dias atuais, como seria uma situação como esta? Onde o publico ali presente tivesse a mesma consciência que tem hoje, onde o certo é o errado e o errado é o certo! Será que soltariam as pedras? 
+
+"O diabo que acabar com os velhos"
+
+A palavra de Deus fala de um rei chamado Joás que nos dias do sacerdote Joiada ainda estava vivo fez o que era reto aos olhos de Deus, mas quando este morreu, o rei passou a fazer o que era mau.
+
+Os de mais idade que guardam os valores morais saudáveis são uma preciosa referência para o mais mais jovens, para a próxima geração. Pelo fato de possuírem algo que riqueza do mundo alguma compra, conhecimento e experiência de vida!
+Experiência que conhecem os danos de uma decisão mal tomada!
+					</div>							
+				</body>	
+				
+				
+***NOTA 
+***SE OS ATRIBUTOS HEIGHT E WIDTH NÃO FOREM DECLARADOS O ELEMENTO HTML TERÁ O TAMANHO (ALTURA OU LARGURA) 100% DA PAGINA USADA
+***QUER DIZER, TAMANHO AUTOMATICO E VAI SE ADAPTANDO AS DIMENSÕES DO NAVEGADOR
+***CASO COLOQUE UM VALOR PARA PELO MENOS UM DESTED ATRIBUTOS, DEPENDENDO DO VALOR E DA AREA USADA
+***A BARRA DE ROLAGEM IRA APARECER, POIS O VALOR ATRIBUIDO AO ELEMENTO É MAIOR DO QUE A AREA VISIVEL DO NAVEGADOR
+
+

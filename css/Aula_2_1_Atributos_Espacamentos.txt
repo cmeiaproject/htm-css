@@ -1,0 +1,282 @@
+Aula 2.1 - ATRIBUTOS - ESPAÇAMENTOS
+===================================
+
+.PADDING
+	. este atributo é responsavel por colocar um espaçamento interno em um elemento html
+	. com este atributo é possivel colocar um espaçamento interno nas quatro posições do elemento:
+	  - topo
+	  - direita	  
+	  - rodape
+	  - esquerda 
+	. quando é definido um unico parametro para este atributo, é atribuido para os demais parametros este o mesmo valor.
+	exemplo:
+				padding: 20px;
+				(é entendido que este valor é para o TOPO, DIREITA, RODAPE e ESQUERDA)
+
+	
+	sintaxe : padding: [<valor_do_espaçamento_topo>] [<valor_do_espaçamento_direita>] [<valor_do_espaçamento_rodape>] [<valor_do_espaçamento_esquerda>]
+	
+	exemplo:
+				<head>
+					<style>
+						#texto
+						{
+							padding: 10px 5px 10px 5px;
+							background-color: green;
+						}
+					</style>
+				</head>
+				<body>
+					<div id="texto">
+						Texto
+						Toda vida eu vi que Deus é Bom<br>
+						Então vejo que Ele tem me ajudado sempre
+					<div>
+				<body>
+	
+	
+.PADDING-TOP
+	. este atributo é responsavel por colocar um espaçamento interno no topo de em um elemento html
+	
+	sintaxe : padding-top: [<valor_do_espaçamento_topo>]
+	
+	exemplo:
+				<head>
+					<style>
+						#texto1
+						{
+							padding-top: 10px;
+							background-color: red;							
+						}
+					</style>
+				</head>
+				<body>
+					<div id="texto1">
+						Texto1<br>					
+						Toda vida eu vi que Deus é Bom<br>
+						Então vejo que Ele tem me ajudado sempre
+					<div>
+				<body>
+	
+	
+	
+.PADDING-BOTTOM
+	. este atributo é responsavel por colocar um espaçamento interno no rodapé de em um elemento html
+	
+	sintaxe : padding-bottom: [<valor_do_espaçamento_rodape>]
+	
+	exemplo:
+				<head>
+					<style>
+						#texto2
+						{
+							padding-bottom: 10px;
+							background-color: blue;							
+						}
+					</style>
+				</head>
+				<body>
+					<div id="texto2">
+						Texto2<br>					
+						Toda vida eu vi que Deus é Bom<br>
+						Então vejo que Ele tem me ajudado sempre
+					<div>
+				<body>
+	
+	  
+	  
+.PADDING-LEFT
+	. este atributo é responsavel por colocar um espaçamento interno no lado esquerdo de em um elemento html
+	
+	sintaxe : padding-left: [<valor_do_espaçamento_lado_esquerdo>]
+	
+	exemplo:
+				<head>
+					<style>
+						#texto3
+						{
+							padding-left: 5px;
+							background-color: black;							
+						}
+					</style>
+				</head>
+				<body>
+					<div id="texto3">
+						Texto3<br>					
+						Toda vida eu vi que Deus é Bom<br>
+						Então vejo que Ele tem me ajudado sempre
+					<div>
+				<body>
+	
+	
+
+
+.PADDING-RIGHT
+	. este atributo é responsavel por colocar um espaçamento interno no lado direito de em um elemento html
+	
+	sintaxe : padding-right: [<valor_do_espaçamento_lado_direito>]
+	  
+	exemplo:
+				<head>
+					<style>
+						#texto4
+						{
+							padding-right: 5px;
+							background-color: gray;							
+						}
+					</style>
+				</head>
+				<body>
+					<div id="texto4">
+						Texto4<br>					
+						Toda vida eu vi que Deus é Bom<br>
+						Então vejo que Ele tem me ajudado sempre
+					<div>
+				<body>
+
+*** NOTA
+*** O PADDING PODE ALTERAR AS DIMENSÕES DO ELEMENTO HTML
+*** AO INSERIR ESPAÇAMENTO INTERNO NO ELEMENTO OS ATRIBUTOS HEIGHT E WIDTH TAMBÉM SÃO ALTERADOS
+*** EXEMPLO:
+				<stryle>
+					div
+					{
+						width: 500px;
+						paddint-left: 15px;
+						paddint-right: 10px;						
+					}
+				</style>
+*** O EXEMPLO ACIMA MOSTRA QUE TODA DIV TERA DE LARGURA 500px, MAS COM A DECLARAÇÃO DO PADDIN-RIGHT
+*** A LARGURA DA DIV SERÁ ALTERADA PARA 525px	  
+*** A MESMA COISA ACONTECE COM A ALTURA CASO SEJA USADO O PADDING-TOP E/OU PADDING-BOTTOM
+	  
+	  
+	  
+.MARGIN
+	. este atributo é responsavel por colocar um espaçamento externo em um elemento html em relação a outro elemento html
+	. com este atributo é possivel colocar um espaçamento externo nas quatro posições do elemento:
+	  - topo
+	  - direita	  
+	  - rodape
+	  - esquerda 
+	. os valores para cada posição são colocadas seguindo a ordem acima
+	. quando é definido um unico parametro para este atributo, é atribuido para os demais parametros este o mesmo valor.
+
+	sintaxe : margin: [<valor_do_espaçamento_topo>] [<valor_do_espaçamento_direita>] [<valor_do_espaçamento_rodape>] [<valor_do_espaçamento_esquerda>]
+	
+	exemplo:
+				<head>
+					<style>
+						#texto5
+						{
+							margin: 10px 5px 10px 5px;
+							background-color: green;
+						}
+					</style>
+				</head>
+				<body>
+					<div id="texto5">
+						Texto5<br>					
+						Toda vida eu vi que Deus é Bom<br>
+						Então vejo que Ele tem me ajudado sempre
+					<div>
+				<body>
+
+.MARGIN-TOP
+	. este atributo é responsavel por colocar um espaçamento externo no topo de em um elemento html em relação a outro elemento html
+	
+	sintaxe : margin-top: [<valor_do_espaçamento_topo>]
+	
+	exemplo:
+				<head>
+					<style>
+						#texto6
+						{
+							margin-top: 10px;
+							background-color: red;							
+						}
+					</style>
+				</head>
+				<body>
+					<div id="texto6">
+						Texto6<br>					
+						Toda vida eu vi que Deus é Bom<br>
+						Então vejo que Ele tem me ajudado sempre
+					<div>
+				<body>
+	
+	
+	
+.MARGIN-BOTTOM
+	. este atributo é responsavel por colocar um espaçamento externo no rodapé de em um elemento html em relação a outro elemento html
+	
+	sintaxe : margin-bottom: [<valor_do_espaçamento_rodape>]
+	
+	exemplo:
+				<head>
+					<style>
+						#texto7
+						{
+							margin-bottom: 10px;
+							background-color: blue;							
+						}
+					</style>
+				</head>
+				<body>
+					<div id="texto7">
+						Texto7<br>					
+						Toda vida eu vi que Deus é Bom<br>
+						Então vejo que Ele tem me ajudado sempre
+					<div>
+				<body>
+	
+	  
+	  
+.MARGIN-LEFT
+	. este atributo é responsavel por colocar um espaçamento externo no lado esquerdo de em um elemento html em relação a outro elemento html
+	
+	sintaxe : margin-left: [<valor_do_espaçamento_lado_esquerdo>]
+	
+	exemplo:
+				<head>
+					<style>
+						#texto8
+						{
+							margin-left: 5px;
+							background-color: black;							
+						}
+					</style>
+				</head>
+				<body>
+					<div id="texto8">
+						Texto8<br>					
+						Toda vida eu vi que Deus é Bom<br>
+						Então vejo que Ele tem me ajudado sempre
+					<div>
+				<body>
+	
+	
+
+
+.MARGIN-RIGHT
+	. este atributo é responsavel por colocar um espaçamento externo no lado direito de em um elemento html em relação a outro elemento html
+	
+	sintaxe : margin-right: [<valor_do_espaçamento_lado_direito>]
+	  
+	exemplo:
+				<head>
+					<style>
+						#texto9
+						{
+							margin-right: 5px;
+							background-color: gray;							
+						}
+					</style>
+				</head>
+				<body>
+					<div id="texto9">
+						Texto9<br>					
+						Toda vida eu vi que Deus é Bom<br>
+						Então vejo que Ele tem me ajudado sempre
+					<div>
+				<body>

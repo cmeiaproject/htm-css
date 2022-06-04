@@ -1,0 +1,80 @@
+*
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+:root
+{
+	--header_corfundo: #334173;
+	--header_input_busca_corfundo: #e7edf2;
+	--corbranco: #ffffff;
+	--corpreto: #000000;	
+	--header_link_navegacao_cortexto: #3875e3;
+	--aside_opcoes_corfundo: #eceff5;
+	--main_corfundo: #dcd2ec;
+	--ultima_conversa_selecionada: #f6f8f9;
+}
+
+body
+{
+	font-family: Arial, Verdana, "sans-serif";
+}
+
+img
+{
+	height: 14px;
+	width: 14px;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+header
+{
+	background-color: var(--header_corfundo);
+	padding: 3px 5px;
+}
+
+header div
+{
+	display: inline-block;
+}
+
+header a
+{
+	color: var(--header_link_navegacao_cortexto);
+	margin-right: 10px;
+}
+
+header a:hover
+{
+	color: var(--corbranco);
+	font-weight: bold;
+}
+
+#navegacao
+{
+	width: 100px;
+}
+
+#pesquisa
+{
+	background-color: var(--corbranco);
+	padding: 1px;
+	width: 400px;
+}
+
+#pesquisa input[type="search"]
+{
+	border: none;
+}
+
+
+
+#configuracao img
+{
+	filter: invert(100%);
+}

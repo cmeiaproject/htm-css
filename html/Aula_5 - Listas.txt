@@ -1,0 +1,90 @@
+Aula 5 - Listas
+======
+
+.OL
+	. tag de listas ordenadas
+	sintaxe:
+				<ol></ol>
+				
+	. atributos
+		.TYPE
+			. serve para alterar a formatação de como os itens serão exibidos
+			. por padrão, os itens são exibidos com um numero na frente.
+			sintaxe:
+					<ol type="<valor>"></ol>
+			
+			exemplo:
+						1. <conteudo 01>
+						2. <conteudo 02>
+						N. <conteudo N>
+			. este atributo recebe os seguintes valores: "1", "A", "a", "I", "i"
+			. o valor "1" é o valor padrão, onde os itens são classificados de modo numerico
+			. o valor "A" os itens são classificados de modo alfabetico, com a letra maiuscula.
+			exemplo:
+						A. <conteudo 01>
+						B. <conteudo 02>
+						Z. <conteudo Z>
+			. o valor "a" os itens são classificados de modo alfabetico, com a letra minuscula.
+			exemplo:
+						a. <conteudo 01>
+						b. <conteudo 02>
+						z. <conteudo z>
+			. o valor "I" os itens são classificados com numeração romana, com a letra maiuscula.
+			exemplo:
+						I.   <conteudo 01>
+						II.  <conteudo 02>
+			. o valor "i" os itens são classificados com numeração romana, com a letra minuscula.
+			exemplo:
+						i.   <conteudo 01>
+						ii.  <conteudo 02>
+			
+		.START			
+			. serve para indicar por qual indice começar.
+			. recebe somente valores numericos	
+			sintaxe:
+					<ol type="valor" start="valor"></ol>			
+					
+			exemplo:
+					<ol type="1" start="4"></ol>							
+					resultado:
+								4. <conteudo 01>
+								5. <conteudo 02>
+								N. <conteudo N>
+								
+					<ol type="a" start="4"></ol>							
+					resultado:
+								d. <conteudo 01>
+								e. <conteudo 02>
+								N. <conteudo N>
+								
+								
+							
+.UL							
+	. tag de listas não ordenadas
+	sintaxe:
+				<ul></ul>
+		.TYPE
+			. serve para alterar a formatação de como os itens serão exibidos
+			. por padrão, os itens são exibidos com um ponto (disc) na frente.
+			sintaxe:
+					<ul type="valor"></ul>
+			
+			. este atributo recebe os seguintes valores: "disc", "circle", "square"
+						
+						
+.DL
+	. tag de listas de definições
+	. semelhante ao ul, mas semanticamente falando é mais propicia para os mecanismos de buscas.
+	. usado como se fosse um dicionario
+	sintaxe:
+				<dl></dl>
+			
+	exemplo:
+				<dl>
+					<dt>Delphi</dt>
+					<dd>Lingagem de programação</dd>					
+				</dl>
+							
+*** NOTA
+*** A TAG <DT> É USADA PARA DEFINIR O TERMO							 
+*** A TAG <DT> É USADA PARA DEFINIR A DESCRUÇÃO DO TERMO

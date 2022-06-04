@@ -1,0 +1,140 @@
+Aula 4 - Flex Grow, Flex Basis, Flex Shrink, Flex, Align Self
+======
+
+***NOTA	
+***OS ATRIBUTOS ABAIXO SÃO USADOS NO ITEM DO CONTAINER
+
+
+. FLEX-GROW
+
+	. este atributo é usado para definir o tamanho (do crescimento) da largura (width) do item
+	. sendo os valores iguais, não havera diferença alguma
+	. o valor colocado é a proporção do espaço que o item ira usar
+	. não são valores de unidade em px, em, in e outros
+	. trata somente da proporção que o item ira ter no container
+	. o seu valor padrão é 0 (zero)
+	sintaxe:
+				flex-grow: <numero>;
+				
+				
+. FLEX-BASIS
+
+	. este atributo define o tamanho inicial do item, antes que o item seja distruido no container.
+	. valores que este atributo recebe
+		- auto		(padrão)
+		- <numero>	
+			- se, o numero for 0(zero) fará com que o item do container tenha o mesmo tamanho, que os demais.
+			- pode ser definido um valor em px, em, in e outros
+			- aceita também porcentagem
+	. se, o valor for 0(zero) a propriedade width do item não será considerada, mas o min-width é considerado.
+	
+	sintaxe:
+			flow-bases: <valor>
+	exemplo:
+				.flow-base-auto
+				{
+					flow-bases: auto;
+				}
+				
+				.flow-base-0
+				{
+					flow-bases: 0;
+				}				
+				
+				.flow-base-10px
+				{
+					flow-bases: 10px;
+				}				
+				
+				
+. FLEX-SHRINK				
+
+	. este atributo ve a capacidade de quanto um item pode ser reduzido
+	. o valor padrão deste atributo é 1
+	. recebendo o valor 0(zero) define que o item não sofrerá redução alguma
+	. permite receber outros valores
+	sintaxe:
+				flow-shrink: <valor>;
+	exemplo:
+				.flow-shrink-normal
+				{
+					flow-shrink: 1;
+				}
+				
+				.flow-shrink-nao-permite-reducao
+				{
+					flow-shrink: 0;
+				}				
+				
+				.flow-shrink-permite-reduzir-ate-3x
+				{
+					flow-shrink: 3;
+				}				
+	
+
+. FLEX
+
+	. este atributo é um "atalho" para utilizar em um mesmo atributo os seguintes dados:
+		1. flex-grow
+		2. flex-shrink
+		3. flex-basis
+	sintaxe:
+				flex: <flex-grow>, <flex-shrink>, <flex-basis>;
+	exemplo:
+				flex: 1;
+				// define que o valor do flex-grow é 1, o valor do flex-shrink é 1 e o flex-basis é 0
+				
+				flex: 0 1 auto;
+				//define que o valor do flex-grow é 0, o valor do flex-shrink é 1 e o flex-basis é auto
+				
+				flex: 3 2 300px;
+				//define que o valor do flex-grow é 3, o valor do flex-shrink é 3 e o flex-basis é 300px;
+				
+. ORDER
+
+	. esta propriedade define a ordem do item dentro do container
+	. o valor padrão é 0(zero)
+	. podendo também receber valor negativo
+	. vai do menor para o maior
+	sintaxe:
+				order: <valor>
+	exemplo:
+				<style>
+					.ordem-0
+					{
+						order: 0;
+					}
+					.ordem-1
+					{
+						order: 1;
+					}
+					.ordem-2
+					{
+						order: 2;
+					}
+				</style>
+				<body>
+					<section>
+						<div class="ordem-2">1</div>
+						<div class="ordem-2">2</div>
+						<div class="ordem-0">3</div>
+					</section>
+				</body>
+				
+				// o exemplo acima, fara´com que a primeira div que estará na frente é a div cujo conteudo é 3, depois a div com conteudo 2, e por ultimo a div com o conteudo 1
+				
+
+. ALIGN-SELF
+
+	. esta propriedade tem a mesma funcionalidade que o [ALIGN-ITEMS], a diferença é que ira trabalhar somente com o item especificado, ao contrario do [ALIGN-ITEMS] que envolve todos os itens do container
+	. estes são os valores que este atributo recebe:
+		- flex-start	(alinha no top o conteudo do container, e só ocupa o espaço necessario)
+		- flex-end		(alinha no rodape o conteudo do container, e só ocupa o espaço necessario)
+		- stretch		(alinha o conteudo em todo espaço do container)
+		- center		(alinha o conteudo no meio do container, e só ocupa o espaço necessario)
+		- baseline		(alinha o conteudo de acordo com o primeiro item do container)		
+		- auto
+	. o valor padrão é auto
+	sintaxe:
+				align-self: [flex-start/flex-end/center/stretch/baseline];
+	

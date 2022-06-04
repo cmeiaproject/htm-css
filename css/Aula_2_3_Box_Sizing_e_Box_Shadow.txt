@@ -1,0 +1,58 @@
+Aula 2.3 - Box Sizing e Box Shadow
+==================================
+
+.BOX SIZING
+	. este atributo faz com que um elemento html (div, por exemplo) que teve suas dimensões alteradas pelo PADDING,
+	  tenha suas dimensões respeitadas, fazendo com que o PADDDING faça o espaçamento interno, mas não altere as
+	  dimensões do elemento que antes tinha sido definido.
+	. para isso este atributo usa o valor BORDER-BOX para que as dimensões sejam respeitas
+	sintaxe: box-sizing:border-box;
+
+	exemplo:
+				<head>
+					#textoN
+					{
+						background-color: black;
+						color: white;
+						width: 500px;
+						padding: 20px;  // ira aumentar a altura em mais 40px (topo + rodape) e ira aumentar também a largura em mais 40px
+						box-sizing: border-box; // fara com que as dimensões definidas para esta div sejam conservadas, fazendo com quw
+												// o acrescimo do padding não influa nas dimensões
+					}
+				</head>
+				<body>
+					<div id="textoN">
+						Lorem ipsum placerat auctor ut sodales eget arcu, amet consectetur quis ad augue felis urna dapibus, sit nisi integer interdum eleifend integer. cursus lorem lacinia a elit ullamcorper tempus, sem nec etiam ipsum quisque hendrerit sit, proin sagittis vivamus dictum eget. potenti dictum quisque leo torquent interdum porta, elementum hac sapien elementum adipiscing aliquam purus, faucibus euismod sit quam mattis. tristique ultrices turpis libero volutpat sollicitudin posuere, curabitur egestas nisl quisque elementum massa, velit donec taciti elementum vel. potenti accumsan taciti himenaeos nec morbi malesuada molestie, fusce ut habitant pulvinar etiam aliquam suspendisse, vivamus aliquam velit blandit habitant tempor. 
+					</div>
+				</body>
+ 
+
+.BOX SHADOW
+	. esta propriedade adiciona sombra ao container (div, table etc).
+	sintaxe:
+				box-shadow: [<posicao_horizontal_da_sombra>] [<posicao_vertical_da_sombra>] [<valor_desfoque>] [cor_da_sombra>]
+				box-shadow: [<posicao_horizontal_da_sombra>] [<posicao_vertical_da_sombra>] [cor_da_sombra>]				
+				
+	(o parametro onde se define o desfoque (ou blur) não é obrigatório)
+	(o 1o. parametro se refere ao posicionamento horizontal - left)
+	(o 2o. parametro se refere ao posicionamento vertival - top)
+	(o 3o. parametro se refere a quanto será o espalhamento, desfocar)
+	(o 3o. parametro se refere a cor)
+
+	exemplo:
+				<head>
+					<style>
+						#textoN
+						{
+							box-shadow: 3px 3px 5px red;
+						}
+						#texto1
+						{
+							text-shadow: 3px 3px red;
+						}
+						
+					</style>
+				</head>
+	
+*** NOTA
+*** OS VALORES DAS POSIÇÕES HORIZONTAIS E VERTICAIS É EM RELAÇÃO AO TEXTO QUE SE QUER FAZER SOMBRA				

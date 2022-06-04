@@ -1,0 +1,209 @@
+Aula 1.2 - Seletores
+=====================
+
+.SELETOR UNIVERSAL (*)
+	. é representado pelo * (asterisitico)
+	. ele é usado para definir valores padrões para toda a pagina
+	. o exemplo abaixa fará com que todos os elementos que tenham algum texto a ser exibido tenha a cor vermelha. Ele esta definindo uma cor
+	  padrão para o texto, mas que não impede que o elemento tenha sua propria cor definida. Mas, isso faz com que o texto de quakquer
+	  elemento da página tenha como cor padrão (ou inicial) a cor vermelha.
+	  ISTO SERVE PARA QUALQUER PROPRIEDADE
+	exemplo:
+				*
+				{
+					color: red;
+				}
+				
+.SELETOR TAG
+	. é representado pela tag html que desejo modificar 
+	. elementos html - h1, p, div, select e etc...
+
+	exemplo:
+				div
+				{
+					color: red;
+				}
+				
+.SELETOR ATRIBUTO
+	. é representado pelO atributo da tag html que desejo modificar
+	sintaxe:
+				<tag>[nome_do_atributo]
+				<tag>[nome_do_atributo="<valor_do_atributo>"]
+				
+	. o exemplo abaixo	faz com que somente elementos <INPUT> cujo atributo <TYPE> que tenha o valor igual a TEXT, seja
+   	  afetado, caso contrario, senão tivesse sido declarado o atributo todos os elementos <INPUT> seriam afetados.
+	  O intuito deste exemplo é mostrar que pode ser usado qualquer atributo para acessar o elemento desejado. Pois poderia
+	  usar o atributo <NAME> ou <ID>
+	exemplo:
+				<head>
+					<style>
+						input[type="text"]
+						{
+							color: green;
+							height: 100px;
+						}
+					</style>
+				</head>
+				<body>
+					<form>
+						<input type="text" id="nome" name="nome"/>
+						<input type="email" id="email" name="email"/>
+						<input type="submit" value="enviar" />
+					</form>	
+				</body>	
+				
+				
+.SELETOR CLASS
+	. um seletor que permite criar um regras para um ou mais elementos html
+	. para usa-lo é necessario usar o atributo CLASS no código html
+	. e para acessa-lo no css, é preciso colocar o .(ponto) antes do nome da classe
+	sintaxe :
+				.<nome_da_classe>
+	exemplo:
+				<head>
+					<style>
+						.vermelho
+						{
+							color: red;
+						}
+						.azul
+						{
+							color: blue;
+						}
+						
+					</style>
+				</head>
+				<body>
+					<h1 class="vermelho">Ola</h1>
+					<h2 class="azul">Mundo!</h1>	
+					<div class="vermelho">Dia Lindo</div>		
+				</body>	
+	
+
+.SELETOR ID (ou NAME)
+	. um seletor que permite criar um regras para um unico elemento html
+	. para usa-lo é necessario usar o atributo ID ou NAME no código html
+	. e para acessa-lo no css, é preciso colocar o #(cerquilha) antes do nome da classe
+	sintaxe :
+				#<nome_do_elemento>
+	exemplo:
+				<head>
+					<style>
+						#cabecalho
+						{
+							color: red;
+							width: 100%;
+							height: 200px;
+						}
+						#conteudo
+						{
+							color: blue;
+							width: 100%;	
+							height: 200px;							
+						}
+						
+					</style>
+				</head>
+				<body>
+					<div id="cabecalho">Dia Lindo</div>		
+					<div id="conteudo">Dia Lindo</div>							
+				</body>	
+
+
+		
+				
+.AGRUPAMENTO DE SELETORES
+	. com o agrupamento posso fazer com que um unico estilo seja usado para varios seletores sem repetir código
+	sintaxe:
+				<tagT1>, <tagT3>, <tagT3>, <tagTN>, <classN1>, <#N1>
+				{
+					atributos
+				}	
+	
+	
+	. o exemplo abaixo mostra elementos diferentes usando o mesmo código
+	exemplo:
+				<style>
+					h1, h2, input[type="text"], input[name="endereco"]
+					{
+						color: blue;
+						width: 100px;
+					}
+				</style>
+				
+				
+.SELETOR ELEMENTO DE ELEMENTO					
+	. é selecionar um elemento que esteja contido em coutro elemento
+	sintaxe:
+				<elemento> <elemento>
+				{
+					atributos
+				}
+				
+	. o exemplo abaixo mostra que somente a tag <p> contida dentro da div#conteudo será estiliza. Se houver outra tag <p> na página, mas que não esteja dentro do elemento div#conteudo, estes não serão estilizadas.
+	exemplo 1 :
+				<style>
+					#conteudo p
+					{
+						color: blue;
+						text-align: justify;
+					}
+				</style>
+				<body>
+					<div id="conteudo">
+						<p>
+							...texto
+						</p>
+					</div>
+				</body>
+				
+	. o exemplo abaixo mostra que somente a tag <p> que possua o atributo "data-name" com o valor "original", e esta tag esteja contida dentro da div#conteudo será estiliza. Se houver outra tag <p> na página, que não tenha estas condições não sera estilizada.
+	exemplo 1 :
+				<style>
+					#conteudo p[data-name="original"]
+					{
+						color: blue;
+						text-align: justify;
+					}
+				</style>
+				<body>
+					<div id="conteudo">
+						<p>
+							...texto
+						</p>
+						<p data-name="original">
+							...texto
+						</p>
+					</div>
+				</body>
+				
+.ACESSANDO O ELEMENTO QUE É FILHO DIRETO DO ELEMENTO PAI
+	. é selecionar um elemento que esteja contido diretamente em coutro elemento. Para isso é usado o sinal '>'
+	sintaxe:
+				<elemento> > <elemento>
+				{
+					atributos
+				}
+				
+	exemplo:
+			<head>
+				<style>
+					#pai > p
+					{
+						color: red;
+					}
+					
+				</style>
+			</head>
+			<body>
+				<div id="pai">
+					<p>123456</p> //esta ligado diretamente a div#pai
+					<div id="filho">
+						<p>kkkkkk</p> //não esta ligado diretamente a div#pai
+					</div>
+					<p>hhhhhhhh</p> //esta ligado diretamente a div#pai
+				</div>
+			</body>	
+			
+	. o exemplo mostra que o elemento <p> que será estilizado é somente aqueles que estão ligados diretamente a div#pai. 
+	Pois diferente dos outros elementos <p> (que também são acessados pela div#pai) não estão ligados diretamente a div#pai.

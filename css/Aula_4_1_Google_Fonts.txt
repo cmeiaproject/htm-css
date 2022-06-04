@@ -1,0 +1,24 @@
+Aula 4.1 - Google Fonts
+=======================
+
+.GOOGLE Fonts
+	. é uma api do Google, disponibilizada para utilizar fontes.
+	. para utilizar a fonte do google desejada, é necessário ir até a pagina do google fonts. Depois pegar o link que o ggogle
+ 	  disponibiliza após escolher qual fonte quer usar.
+	. link desta fonte é adicionado no arquivo html na seção <head>
+	. depois utilizar o font-family
+	exemplo:
+				<head>
+					<link href="<caminho_arquivo_google_fonts>" rel="stylesheet" type="text/css" />
+					<style>
+						p
+						{
+							font-family: <font_family_google_fonts>;
+						}
+					</style>
+				</head>
+				<body>
+					<div>
+						<p>Teste</p>
+					</div>
+				</body>

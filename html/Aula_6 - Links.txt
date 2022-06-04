@@ -1,0 +1,67 @@
+Aula 6 - Links
+======
+
+. A
+	. esta tag é responsável por fazer a conexão com outras paginas ou aplicações
+	sintaxe:
+			<a>conteudo</a>
+	
+	.Atributos
+		.HREF
+			. este atributo é responsavel por identificar o local onde se encontra o documento desejado para ser acessado
+			sintaxe:
+					<a href="<url>">conteudo</a>
+			(se colocar '#' no href, ao clicar no link, este não saira da pagina atual).
+			
+		.TARGET
+			. este atributo identifica onde a pagina a ser acessada sera exibida
+			. este atributo não é obrigatorio
+			. recebe os seguintes valores: 
+				- "_blank", que faz com que uma nova aba do navegador seja criada, fazendo com que a pagina identificada no href seja exibida nesta aba
+				- "_self", que faz com que a pagina identificada no hrefm sobreescreva a pagina atual.
+			sintaxe:
+					<a href="<enedereço>" target="_blank/_self">conteudo</a>
+				
+			exemplo:	
+					<a href="www.euadministro.com.br" target="_blank">site euadministro</a>
+					
+					<a href="www.euadministro.com.br" target="_self">site euadministro</a>
+					são semelhante
+					<a href="www.euadministro.com.br">siteeuadministro</a>					
+					
+		. REL
+			. este atributo identifica ao mecanismo de busca, como fica a navegação do site 
+			. recebe os seguintes valores:
+				- "next"
+					- indica para o mecanismo de busca que, a pagina referenciada no atributo href é uma das paginas do site que pode ser chamada.
+				- "prev"
+					- indica para o mecanismo de busca que, a pagina referenciada no atributo href é a pagina que chamou a atual.
+				- "external"
+					- indica para o mecanismo de busca que, a pagina referenciada no atributo href é uma pagina externa, de outro dominio.				
+				- "nofollow"
+					- indica para o mecanismo de busca que, a pagina referenciada no atributo href não deve ser indexada no mecanismo de busca, pois pode tratar de uma fonte não confiavel
+		exemplo:
+					<a href="www.google.com" target="_blank" rel="external">Google</a>
+					- acessa um link externo
+					
+					<a href="proxima_pagina.html" rel="next">proxima pagina</a>					
+					- acessa a proxima pagina
+					
+					<a href="pagina_anterior.html" rel="prev">pagina anterior</a>										
+					- acessa a pagina anterior (a que chamou)
+			
+					<a href="pagina_duvidosa.html" target="_blank" rel="nofollow">pagina duvidosa</a>										
+					- acessa a pagina duvidosa, mas não fara parte da indexação do mecanismo de busca
+
+					
+		.TYPE
+			. este atributo faz com que o item identificado no href, seja baixado
+			sintaxe:
+						<a href="<link>" type="<valor>">conteudo</a>
+						
+			exemplo:				
+						<a href="arquivo.zip" type="application/zip">Arquivo zipado</a>			
+						
+*** NOTA 
+*** https://www.iana.org/assignments/media-types/media-types.xhtml
+*** ESTE ENDEREÇO CONTEM OS VALORES QUE DEVEM SER IDENTIFICADOS PARA QUE O DOWNLOAD SEJA EFETUADO

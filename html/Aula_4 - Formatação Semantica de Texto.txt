@@ -1,0 +1,125 @@
+Aula 4 - Formatação Semantica de Texto 
+======
+
+.MARK
+	. é uma tag uasada para marca um texto
+	sintaxe:
+				<mark>conteudo</mark>
+				- o resultado será uma tarja amarela sobre o texto. Para mudar a cor, deve-se usar css
+
+.SMALL
+	. é uma tag uasada para um texto pequeno
+	sintaxe:
+				<small>conteudo</small>
+	exemplo:
+				<p>Tudo começa pelo inicio, caso não entenda veja as <small>letras pequenas</small></p>
+
+
+.DEL				
+	. é uma tag usada para riscar um texto
+	sintaxe:
+				<del>conteudo</del>
+	exemplo:
+				<p>Esta parte do texto <del>não deve ser considerada</del></p>
+
+
+.INS
+	. é uma tag usada para sublinhar um texto
+	sintaxe:
+				<ins>conteudo</ins>
+	exemplo:
+				<p>Esta parte do texto <ins>deve ser considerada</ins></p>
+
+
+.SUP
+	. é uma tag para sobreescrever um texto
+	sintaxe:
+				<sup>conteudo</sup>
+				- o resultado fara com que o conteudo fique numa posição acima (ou elevada) em relação ao texto que ela se encontra
+	exemplo:
+				<p>A formula matematica x<sup>4</sup>=8</p>
+
+.SUB
+	. é uma tag para subescrever um texto
+	sintaxe:
+				<sub>conteudo</sub>
+				- o resultado fara com que o conteudo fique numa posição abaixo em relação ao texto que ela se encontra
+	exemplo:
+				<p>A molecula da agua é H<sub>2</sub>O</p>
+
+
+.CODE
+	.é uma tag usada para fazer com que os caracteres de um texto tenham o mesmo espaçamento.
+	sintaxe:
+				<code>conteudo</code>
+				- o resultado do conteudo é todos os caracteres terem o mesmo tamanho, espaçamento. Por exemplo> a letra 'l' ter o mesmo tamanho/espaçamento que a letra 'A'
+				
+	exemplo:
+				<p>A instrução document.getElementByUd('teste') é uma instrução javaScript</p>
+				<p>A instrução <code>document.getElementByUd('teste')</code> é uma instrução javaScript</p>		
+
+.PRE
+	. é uma tag que respeita a tabulação, na qual o texto se encontra dentro do corpo html.
+	sintaxe:
+			<pre>conteudo</pre>
+			
+	exemplo:
+			<pre>
+				<code>
+					public class Objeto
+					{
+						private $nomeObjeto;
+						
+						public function __construtor()
+						{
+							$this->nomeObjeto = 'teste'
+						}
+					}
+				</code>
+			</pre>
+			
+			- com a tag <pre> a identação acuma é respeita, e será exibida desta forma na página.
+			- sem esta tag, o códugi ficaria tudo na mesma linha.
+				
+.Q ou QUOTE				
+	. é uma tag usada para citar um trecho de texto
+	. esta tag é o <quote>
+	. ela coloca o texto entre aspas duplas (")
+	sintaxe:
+			<q>conteudo</q>
+			
+	exemplo:
+			<p>Como diria o poeta: <q>Rapadura é doce, mas não é mole.</q></p>			
+			
+
+.BLOCKQUOTE				
+	. é uma tag usada para citar um bloco de texto
+	. ela coloca o texto entre aspas duplas (")
+	. ela desloca o texto para a direita
+	sintaxe:
+			<blockquote>conteudo</blockquote>
+	
+	.atributos:
+		1. CITE
+			. é um atributo que aponta para onde se encontra o texto. (isso é usado em situações como trechos de livros, ou publicações). 
+			. Não aparece o link, mas faz com que os mecanismos de busca, saibam que o texto exibido esta referenciando a publicação que esta sendo referenciado pelo link.
+			. Não é obrigatorio
+			sintaxe:
+					<blockquote cite="<endereço>">
+			
+	exemplo:
+			<p>Como diria o poeta: <blockquote cite="https://www.lipsum.com/">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</blockquote></p>			
+
+
+.ABREVIAÇÕES			
+
+.ABBR
+	. tag usada para informar o significado de uma abreviação.
+	. Não é um link.
+	. para isso, a tag usa o atributo TITLE.
+	. ira exibir um "tip" quando o nouse passar por cima do texto, com o conteudo que estiver em "title"
+	sintaxe:
+			<abbr title="conteudo">conteudo</abbr>
+			
+	exemplo:
+			<p>Igreja <abbr title="Anunciando o Reino de Deus as Nações">ARDEN</abbr></p>

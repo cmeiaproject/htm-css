@@ -1,0 +1,94 @@
+Aula 3.2 - Border-Radius
+========================
+
+.BORDER-RADIUS
+	. este atributo é usado para areendondar os cantos de um elemento.
+	sintaxe:
+				border-radius: <valor>
+	
+	Usar:
+		Canto A (superior-esquerda)
+		Canto B (superior-direita)
+		Canto C (inferior-direita)
+		Canto D (inferior-esquerda)
+	
+	1. Todos os cantos
+		. se somente um valor for atribuido para este atributo, todos os cantos do elemento serão arredondados com este valor.
+	2. Cantos A e C iguais e Cantos B e D iguais
+		. se dois valores forem atribuido para este atributo, os cantos A e C do elemento serão arredondados com o primeiro valor. Os cantos B e D serão arredondados com o segundo valor. 
+	3. Cantos A e C diferentes e Cantos B e D iguais
+		. se tres valores forem atribuido para este atributo, o canto A do elemento sera arredondado com o primeiro valor. 
+		Os cantos B e D serão arredondados com o segundo valor. O canto C será arredondado com o terceiro valor
+	3. Todos os cantyos diferentes
+		. se 4 valores forem atribuido para este atributo, então cada canto tera o seu valor de arredondamento da borda. 
+		O canto A usará o primeiro valor, canto B usara o segundo valor, canto C o terceiro valor e o cando D usará o qiiarto valor.
+		
+	exemplo:
+				<head>
+					<style>
+						div
+						{
+							width: 300px;
+							height: 300px;
+						}
+						#conteudo1
+						{
+							border-radius: 20px;
+						}
+						#conteudo2
+						{
+							border-radius: 20px 50px;
+						}
+						#conteudo3
+						{
+							border-radius: 20px 50px 100px;
+						}
+						#conteudo1
+						{
+							border-radius: 20px 50px 100px 30px;
+						}
+					</style>
+				</head>
+				<body>				
+					<div id="conteudo1">
+						<p>Todos os cantos arredondados</p>
+					<div>
+					<div id="conteudo2">
+						<p>canto superior-esquerda e inferior-direita com 20px de arredondamento</p>					
+						<p>canto superior-direita e inferior-esquerda com 50px de arredondamento</p>
+					<div>
+					<div id="conteudo2">
+						<p>canto superior-esquerda com 20px de arredondamento</p>					
+						<p>canto superior-direita e inferior-esquerda com 50px de arredondamento</p>
+						<p>canto inferior-direita com 100px de arredondamento</p>
+					<div>
+					<div id="conteudo2">
+						<p>canto superior-esquerda com 20px de arredondamento</p>					
+						<p>canto superior-direita com 50px de arredondamento</p>
+						<p>canto inferior-direita com 100px de arredondamento</p>
+						<p>canto inferior-direita com 30px de arredondamento</p>						
+					<div>
+				</body>
+				
+.BORDER-TOP-RIGHT-RADIUS				
+	. este atributo é usado para areendondar o canto superior direito de um elemento.
+	sintaxe:
+				border-top-right-radius: <valor>
+
+.BORDER-TOP-LEFT-RADIUS				
+	. este atributo é usado para areendondar o canto superior esquerdo de um elemento.
+	sintaxe:
+				border-top-left-adius: <valor>
+
+.BORDER-BOTTOM-RIGHT-RADIUS	
+	. este atributo é usado para areendondar o canto inferior direito de um elemento.
+	sintaxe:
+				border-bottom-right-radius: <valor>
+			
+.BORDER-BOTTOM-LEFT-RADIUS				
+	. este atributo é usado para areendondar o canto inferior esquerdo de um elemento.
+	sintaxe:
+				border-borrom-left-adius: <valor>
+
+				
+	

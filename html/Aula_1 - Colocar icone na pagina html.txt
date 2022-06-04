@@ -1,0 +1,15 @@
+Aula 1.1 - Modo de aplicar o icone da pagina html no navegador
+==============================================================
+
+. Colocando icone na pagina html
+	- declarando no atributo "rel" tag "link" (do cabeçalho da página), o seguinte valor - "icon"
+	sintaxe:
+			<head>
+				<link rel="icon" href="<caminho_do_icone>" type="image/x-icon">
+			</head>	
+			
+. Sites para icones para paginas
+	- favicon.io
+	- iconarchive	
+	  
+

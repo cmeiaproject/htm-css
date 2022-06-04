@@ -1,0 +1,297 @@
+*
+{
+	padding: 0;
+	margin: 0;
+}
+
+:root
+{
+	--cor1: #107c41;
+	--cor2:	#00ffff;
+	--cor3: #db545a;
+	--cor4:	#ff00ff;
+	--cor5: #b0c3de;
+	--cor6:	#f0e68c;
+	--cor7: #ffffcc;
+	--cor8: #6B4FBB;
+}
+
+header
+{
+	text-align: center;
+	height: 50px;
+}
+
+
+.formFlex
+{
+	height: 180px;
+	padding: 2px;
+}
+
+.sectionFlex
+{
+	display: flex;
+}
+
+.container
+{
+	display: flex;
+	border: 1px solid black;
+	width: 600px;
+	height: 400px;
+	margin: auto;
+	background-color: var(--cor7);
+}
+
+
+.box200px
+{
+	height: 80px;	
+	border: 1px solid black;
+	margin-left: 5px;
+}
+
+.cor1
+{
+	background-color: var(--cor1);
+}
+
+.cor2
+{
+	background-color: var(--cor2);
+}
+
+.cor3
+{
+	background-color: var(--cor3);
+}
+
+.cor4
+{
+	background-color: var(--cor4);
+}
+
+.cor5
+{
+	background-color: var(--cor5);
+}
+
+.cor6
+{
+	background-color: var(--cor6);
+}
+
+.cor7
+{
+	background-color: var(--cor7);
+}
+
+.cor8
+{
+	background-color: var(--cor8);
+}
+
+
+.flex-direction-row
+{
+	flex-direction: row;
+}
+
+.flex-direction-column
+{
+	flex-direction: column;
+}
+
+.flex-direction-row-reverse
+{
+	flex-direction: row-reverse;
+}
+
+.flex-direction-column-reverse
+{
+	flex-direction: column-reverse;
+}
+
+.flex-wrap-wrap
+{
+	flex-wrap: wrap;
+}
+
+.flex-wrap-nowrap
+{
+	flex-wrap: nowrap;
+}
+
+.flex-wrap-wrap-reverse
+{
+	flex-wrap: wrap-reverse;
+}
+
+.justify-content-flex-start
+{
+	justify-content: flex-start;
+}
+
+.justify-content-flex-end
+{
+	justify-content: flex-end;
+}
+
+.justify-content-center
+{
+	justify-content: center;
+}
+
+.justify-content-space-between
+{
+	justify-content: space-between;
+}
+
+.justify-content-space-around
+{
+	justify-content: space-around;
+}
+
+
+.align-items-flex-start
+{
+	align-items: flex-start;
+}
+
+.align-items-flex-end
+{
+	align-items: flex-end;
+}
+
+.align-items-center
+{
+	align-items: center;
+}
+
+.align-items-stretch
+{
+	align-items: stretch;
+}
+
+.align-items-baseline
+{
+	align-items: baseline;
+}
+
+
+.align-content-flex-start
+{
+	align-content: flex-start;
+}
+
+.align-content-flex-end
+{
+	align-content: flex-end;
+}
+
+.align-content-center
+{
+	align-content: center;
+}
+
+.align-content-stretch
+{
+	align-content: stretch;
+}
+
+.align-content-space-between
+{
+	align-content: space-between;
+}
+
+.align-content-space-around
+{
+	align-content: space-around;
+}
+
+
+.order-minus-5
+{
+	order: -5;
+}
+
+.order-minus-4
+{
+	order: -4;
+}
+
+.order-minus-3
+{
+	order: -3;
+}
+
+.order-minus-2
+{
+	order: -2;
+}
+
+.order-minus-1
+{
+	order: -1;
+}
+
+.order-0
+{
+	order: 0;
+}
+
+.order-1
+{
+	order: 1;
+}
+
+.order-2
+{
+	order: 2;
+}
+
+.order-3
+{
+	order: 3;
+}
+
+.order-4
+{
+	order: 4;
+}
+
+.order-5
+{
+	order: 5;
+}
+
+.order-6
+{
+	order: 6;
+}
+
+.order-7
+{
+	order: 7;
+}
+
+.order-8
+{
+	order: 8;
+}
+
+.order-9
+{
+	order: 9;
+}
+
+.order-10
+{
+	order: 10;
+}
+
+.order-11
+{
+	order: 11;
+}

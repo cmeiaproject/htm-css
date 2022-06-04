@@ -1,0 +1,151 @@
+Indice
+======
+
+1. Aula01
+	1.1. Aula 01.1
+		- Forma de acessar o css
+		
+	1.2. Aula 01.2
+		- SELETORES
+			- Universal (*)
+			- Tag
+			- Atributo
+			- Classe
+			- id	
+			- Agrupamento de Seletores
+			- Elemento de Elemento
+			- Acessando o Elemento que é filho direto do Elemento Pai
+			
+	1.3. Aula 01.3			
+		- ATRIBUTOS DE DIMENSOES
+			- Height
+			- Max-Height
+			- Min-Height
+			- Width
+			- Max-Width
+			- Min-Width
+			
+2. Aula02
+	2.1. Aula 02.1
+		 - ATRIBUTOS DE ESPAÇAMENTOS
+			- padding
+			- padding-top
+			- padding-bottom
+			- padding-left
+			- padding-right
+			- margin
+			- margin-top
+			- margin-bottom
+			- margin-left
+			- margin-right
+			
+	2.2. Aula 02.2
+		 - ATRIBUTOS DO TEXTO
+			- color
+			- text-align
+			- text-decoration
+			- text-decoration-line
+			- text-decoration-style
+			- text-decoration-color			
+			- text-transform
+				- uppercase
+				- lowercase
+				- capitalize
+			- text-indent
+			- line-height
+			- direction
+			- letter-spacing
+			- word-spacing
+			- text-shadow
+			
+	2.3. Aula 02.3
+		 - Box-Sizing
+		 - Box-Shadow
+		 
+3. Aula03
+	3.1. Aula 03.1
+		 - OverFlow
+		 - Opacity
+		 
+	3.2. Aula 03.2
+		 - Border-Radius
+		 - Border-Top-Right-Radius
+		 - Border-Top-Left-Radius		 
+		 - Border-Bottom-Right-Radius
+		 - Border-Bottom-Left-Radius
+
+	3.3. Aula 03.3
+		 - Font-Family
+		 - Font-Size
+		 - Font-Variant
+		 - Font-Weight
+		 - Font-Style
+		 - em (Unidade de medida relativa)	
+		 - src
+		 - url
+		 - @Font-Face
+		 
+4. Aula04
+	4.1. Aula 04.1
+		 - Google Fonts
+		 
+	4.2. Aula 04.2
+		 - Background-color
+		 - RGB
+		 - RGBA
+		 - HSL
+		 - HSLA
+		 - Background-image
+		 - linear-gradient
+		 - radial-gradient
+		 
+	4.3. Aula 04.3		 
+		 - Float
+		 - Left
+		 - Right
+		 - Top
+		 - Bottom
+		 - Position
+
+	4.4. Aula 04.4
+		 - Border
+		 - Border-Style
+		 - Border-Width
+		 - Border-Color
+		 - Border-Top
+		 - Border-Left
+		 - Border-Bottom
+		 - Border-Right
+		 - OutLine
+		 
+5. Aula 05
+	5.1. Aula 05.1
+		 - Pseudo class
+		 - hover
+		 - Transition
+		 - Transition-Property
+		 - Transition-Duration
+		 - Transition-Timing-Function
+		 - Transition-Delay	
+		 
+	5.2. Aula 05.2		 
+		 - Background
+		 - Background-Repeat
+		 - Background-Size
+		 - Background-Position
+		 - Background-Attachment
+		 
+	5.3. Aula 05.3		 		 
+		 - CurrentColor
+		 - Definindo Variaveis CSS
+		 - Content
+		 - Root (:Root)
+		 - Var
+		 - Target
+		 
+	5.4. Aula 05.4
+		 - Calc
+		 - Meta Viewport
+		 
+	5.5. Aula 05.5		 
+		 - Filter

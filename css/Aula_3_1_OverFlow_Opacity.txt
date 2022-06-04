@@ -1,0 +1,102 @@
+Aula 3.1 - OverFlow e Opacity
+=============================
+
+.OVERFLOW
+	. (Transbordar) este atributo trata de situações onde o conteudo (texto, imagem e etc) de um container
+	  ultrapassa (é maior) as dimensões deste mesmo container.
+	  exemplo 1 :
+					um texto que ficou  maior do que as dimensões da div que se encontra
+					
+	. este atributo recebe os seguintes valores								:
+		a. VISIBLE (Valor Padrão)
+			. faz com que a parte do conteudo que excede as dimensões do container, ainda continue visivel.
+			
+		b. HIDDEN
+			. faz com que a parte do conteudo que excede as dimensões do container, não seja mais visivel.		
+			
+		c. SCROLL
+			. coloca as barra de rolagem (vertical e horizontal) no container, para assim poder ver o conteudo excedente.
+		
+		d. AUTO
+			. coloca as barra de rolagem (vertical e horizontal no container. Mas, só vai ficar a barra de rolagem (vertical ou horizontal) que esta excedendo as dimensões do container. Quer dizer, se a altura do conteudo for maior do que a altura do container, então a barra de rolagem vertical ficará visivel, caso contrario não. Da mesma forma a largura.
+			
+		exemplo:
+					<style>
+						div
+						{
+							width: 200px;
+							height: 200px;
+						}		
+						#conteudo1
+						{
+							background-color: red;
+						}
+						#conteudo1
+						{
+							background-color: green;
+						}
+						#conteudo2
+						{
+							background-color: yellow;
+						}
+						#conteudo4
+						{
+							background-color: blue;
+						}
+						#conteudo1 p
+						{
+							overflow: visible;
+						}
+						#conteudo2 p
+						{
+							overflow: hidden;
+						}
+						#conteudo3 p
+						{
+							overflow: scroll;
+						}
+						#conteudo4 p
+						{
+							overflow: auto;
+						}
+					</style>
+					<body>
+						<div id="conteudo1">
+							<p>Lorem ipsum placerat auctor ut sodales eget arcu, amet consectetur quis ad augue felis urna dapibus, sit nisi integer interdum eleifend integer. cursus lorem lacinia a elit ullamcorper tempus, sem nec etiam ipsum quisque hendrerit sit, proin sagittis vivamus dictum eget. potenti dictum quisque leo torquent interdum porta, elementum hac sapien elementum adipiscing aliquam purus, faucibus euismod sit quam mattis. tristique ultrices turpis libero volutpat sollicitudin posuere, curabitur egestas nisl quisque elementum massa, velit donec taciti elementum vel. potenti accumsan taciti himenaeos nec morbi malesuada molestie, fusce ut habitant pulvinar etiam aliquam suspendisse, vivamus aliquam velit blandit habitant tempor. 
+							</p>
+						</div>
+						<div id="conteudo2">
+							<p>Lorem ipsum placerat auctor ut sodales eget arcu, amet consectetur quis ad augue felis urna dapibus, sit nisi integer interdum eleifend integer. cursus lorem lacinia a elit ullamcorper tempus, sem nec etiam ipsum quisque hendrerit sit, proin sagittis vivamus dictum eget. potenti dictum quisque leo torquent interdum porta, elementum hac sapien elementum adipiscing aliquam purus, faucibus euismod sit quam mattis. tristique ultrices turpis libero volutpat sollicitudin posuere, curabitur egestas nisl quisque elementum massa, velit donec taciti elementum vel. potenti accumsan taciti himenaeos nec morbi malesuada molestie, fusce ut habitant pulvinar etiam aliquam suspendisse, vivamus aliquam velit blandit habitant tempor. 
+							</p>
+						</div>
+						<div id="conteudo3">
+							<p>Lorem ipsum placerat auctor ut sodales eget arcu, amet consectetur quis ad augue felis urna dapibus, sit nisi integer interdum eleifend integer. cursus lorem lacinia a elit ullamcorper tempus, sem nec etiam ipsum quisque hendrerit sit, proin sagittis vivamus dictum eget. potenti dictum quisque leo torquent interdum porta, elementum hac sapien elementum adipiscing aliquam purus, faucibus euismod sit quam mattis. tristique ultrices turpis libero volutpat sollicitudin posuere, curabitur egestas nisl quisque elementum massa, velit donec taciti elementum vel. potenti accumsan taciti himenaeos nec morbi malesuada molestie, fusce ut habitant pulvinar etiam aliquam suspendisse, vivamus aliquam velit blandit habitant tempor. 
+							</p>
+						</div>
+						<div id="conteudo4">
+							<p>Lorem ipsum placerat auctor ut sodales eget arcu, amet consectetur quis ad augue felis urna dapibus, sit nisi integer interdum eleifend integer. cursus lorem lacinia a elit ullamcorper tempus, sem nec etiam ipsum quisque hendrerit sit, proin sagittis vivamus dictum eget. potenti dictum quisque leo torquent interdum porta, elementum hac sapien elementum adipiscing aliquam purus, faucibus euismod sit quam mattis. tristique ultrices turpis libero volutpat sollicitudin posuere, curabitur egestas nisl quisque elementum massa, velit donec taciti elementum vel. potenti accumsan taciti himenaeos nec morbi malesuada molestie, fusce ut habitant pulvinar etiam aliquam suspendisse, vivamus aliquam velit blandit habitant tempor. 
+							</p>
+						</div>
+					</body>
+					
+.OPACITY
+	. este atributo define o grau de transparência de um elemento que varia de 0 a 1.
+	. os valores são fracionados, por exemplo: 0.4
+	. o numero 1 corresponde a 100%
+	
+		sintaxe:
+					opacity: <valor>;
+		exemplo:
+					<style>
+						#conteudo1 p
+						{
+							opacity: 0.5;
+						}
+					</style>
+					<body>
+						<div id="#conteudo1" name="#conteudo1">
+							<p>Lorem ipsum placerat auctor ut sodales eget arcu, amet consectetur quis ad augue felis urna dapibus, sit nisi integer interdum eleifend integer. cursus lorem lacinia a elit ullamcorper tempus, sem nec etiam ipsum quisque hendrerit sit, proin sagittis vivamus dictum eget. potenti dictum quisque leo torquent interdum porta, elementum hac sapien elementum adipiscing aliquam purus, faucibus euismod sit quam mattis. tristique ultrices turpis libero volutpat sollicitudin posuere, curabitur egestas nisl quisque elementum massa, velit donec taciti elementum vel. potenti accumsan taciti himenaeos nec morbi malesuada molestie, fusce ut habitant pulvinar etiam aliquam suspendisse, vivamus aliquam velit blandit habitant tempor. 
+							</p>
+						</div>
+					</body>
+

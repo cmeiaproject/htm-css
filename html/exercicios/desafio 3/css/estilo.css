@@ -1,0 +1,283 @@
+*
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+:root
+{
+	--header_corfundo: #334173;
+	--header_input_busca_corfundo: #e7edf2;
+	--corbranco: #ffffff;
+	--corpreto: #000000;	
+	--header_link_navegacao_cortexto: #3875e3;
+	--aside_opcoes_corfundo: #eceff5;
+	--main_corfundo: #dcd2ec;
+	--ultima_conversa_selecionada: #f6f8f9;
+}
+
+body
+{
+	font-family: Arial, Verdana, "Sans-serif";
+}
+
+img
+{
+	height: 14px;
+	width: 14px;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+ul
+{
+	list-style: none;
+}
+
+header
+{
+	background-color: var(--header_corfundo);
+	padding: 0px 10px;
+	white-space: nowrap;
+	overflow-x: hidden;
+	height: 41px;
+}
+
+header div
+{
+	display: inline-block;
+	padding: 5px;
+}
+
+header ul li a
+{
+	color: var(--header_link_navegacao_cortexto);
+}
+
+header a:hover
+{
+	color: var(--corbranco);
+	font-weight: bold;
+}
+
+header input[type="search"]
+{
+	border-width: 0px;
+	border-radius: 2px;
+	text-indent: 5px;
+	background-color: var(--header_input_busca_corfundo);
+	width: 400px;
+	height: 25px;
+	margin-top: 3px;
+}
+
+main
+{
+	background-color: var(--main_corfundo: #dcd2ec);
+	padding: 0px 10px;
+	max-width: 900px;
+}
+
+aside
+{
+	width: 80px;
+	text-align: center;
+	padding: 5px;
+	background-color: var(--aside_opcoes_corfundo);	
+	float: left;
+	font-size: 0.8em;
+}
+
+aside ul li
+{
+	margin-top: 20px;
+}
+
+aside ul li a
+{
+	color: #48578e; //#6171a9;
+}
+
+aside ul li a:hover
+{
+	color: #6171a9;
+}
+
+aside ul li img
+{
+	display: block;
+	margin: auto;
+	margin-bottom: 3px;
+	height: 20px;
+	width: 20px;
+}
+
+section
+{
+	margin-left: 5px;
+	float: left;
+}
+
+section div
+{
+	background-color: var(--aside_opcoes_corfundo);		
+}
+
+
+#navegacao
+{
+	width: 200px;
+}
+
+#navegacao a
+{
+	margin-left: 10px;
+}
+
+#pesquisa
+{
+	width: 400px;
+}
+
+#configuracao
+{
+	width: 200px;
+	text-align: center;
+	float: right;
+}
+
+#configuracao img
+{
+	filter: invert(90%);
+	margin-top: 3px;
+}
+
+#configuracao > div:hover
+{
+	background-color: var(--corbranco);
+	border-radius: 5px;
+}
+
+#configuracao > div:hover img
+{
+	filter: invert(0%);
+}
+
+#espaco
+{
+	height: 100px;
+}
+
+#contatos_cabecalho
+{
+	height: 27px;
+	padding: 10px;
+}
+
+#contatos_cabecalho div
+{
+	display: inline-block;
+}
+
+#contatos_cabecalho_filtro a
+{
+	color: var(--corpreto);
+	font-weight: bolder;
+	font-size: 22px;
+}
+
+#contatos_cabecalho_filtro a:hover
+{
+	color: #6171a9;
+}
+
+#contatos_cabecalho_icones
+{
+	float: right;
+	height: 26px;
+}
+
+#contatos_cabecalho_icones img
+{
+	margin-top: 7px;
+}
+
+#contatos_ultima_conversa
+{
+	font-size: 0.8em;
+	margin-top: 5px;
+}
+
+#chat
+{
+	font-size: 0.8em;	
+}
+
+div.ultima_conversa
+{
+	display: flex;
+	flex: row;
+	padding: 10px 5px 10px 15px;
+}
+
+div.ultima_conversa_img
+{
+	margin: auto;
+}
+
+div.ultima_conversa_contato
+{
+	margin-left: 13px;
+	width: 200px;
+}
+
+div.ultima_conversa:hover
+{
+	background-color: var(--ultima_conversa_selecionada);
+}
+
+div.ultima_conversa:hover > div
+{
+	background-color: var(--ultima_conversa_selecionada);
+}
+
+#chat_contato_detalhe
+{
+	height: 27px;
+	padding: 10px;
+}
+
+#chat_contato_detalhe a:hover
+{
+	border-bottom: 4px solid red;
+}
+
+#chat_contato
+{
+	margin-top: 5px;
+}
+
+#chat_contato div.ultima_conversa_img
+{
+	width: 20px;
+}
+
+
+#chat_contato div.ultima_conversa_contato
+{
+	width: 450px;
+}
+
+
+#menu_utilizador
+{
+	display: none;
+}
+
+#configuracao div:hover #menu_utilizador
+{
+	display: block;
+}

@@ -1,0 +1,104 @@
+Aula 4.4 - Border, Outline
+==========================
+
+.BORDER-STYLE
+	. este atributo define o estilo da borda do elemento
+	. recebe os seguintes valores:
+		- dotted
+		- dashed
+		- solid
+		- double
+		- groove
+		- ridge
+		- inset
+		- ouset
+	sintaxe:
+				border-style: solid;
+				
+.BORDER-WIDTH				
+	. este atributo define a largura da borda do elemento.
+	sintaxe:
+				border-width: 5px;
+				
+.BORDER-COLOR
+	. este atributo define a cor da borda do elemento.
+	sintaxe:
+				border-color: green;
+				
+.BORDER
+	. este atributo define o estilo, a largura e a cor do elemento
+	. trabalha com a borda interior do elemento html		
+	. estes são os parametros que recebe:
+		- estilo
+		- largura
+		- cor
+	. estes valores sõ inseridos nas bordas de topo, esquerda, direita e rodapé
+	sintaxe:
+				border: <estilo> <largura> <cor>
+				border: solid 10px blue;
+	
+.BORDER-TOP
+	. este atributo define o estilo, a largura e a cor do elemento, somente para a borda superior (topo)
+	. trabalha com a borda interior do elemento html		
+	. estes são os parametros que recebe:
+		- estilo
+		- largura
+		- cor
+	sintaxe:
+				border-top: <estilo> <largura> <cor>
+				border-top: solid 10px blue;
+
+
+.BORDER-LEFT
+	. este atributo define o estilo, a largura e a cor do elemento, somente para a borda esquerda
+	. trabalha com a borda interior do elemento html		
+	. estes são os parametros que recebe:
+		- estilo
+		- largura
+		- cor
+	sintaxe:
+				border-left: <estilo> <largura> <cor>
+				border-left: solid 10px blue;
+
+
+
+.BORDER-RIGHT
+	. este atributo define o estilo, a largura e a cor do elemento, somente para a borda direita
+	. trabalha com a borda interior do elemento html		
+	. estes são os parametros que recebe:
+		- estilo
+		- largura
+		- cor
+	sintaxe:
+				border-right: <estilo> <largura> <cor>
+				border-right: solid 10px blue;
+
+
+
+.BORDER-BOTTOM
+	. este atributo define o estilo, a largura e a cor do elemento, somente para a borda inferior (rodapé)
+	. trabalha com a borda interior do elemento html	
+	. estes são os parametros que recebe:
+		- estilo
+		- largura
+		- cor
+	sintaxe:
+				border-bottom: <estilo> <largura> <cor>
+				border-bottom: solid 10px blue;
+				
+** NOTA
+** OS ATRIBUTOS BORDER TRABALHAM NA PARTE INTERIOR DO ELEMENTO HTML, QUER DIZER, SÃO BORDAS INTERIORES
+
+
+.OUTLINE
+	. este atributo define o estilo, a largura e a cor do elemento.
+	. trabalham com as bordas exteriores do elemento html
+	. estes são os parametros que recebe:
+		- estilo
+		- largura
+		- cor
+	. estes valores sõ inseridos nas bordas de topo, esquerda, direita e rodapé
+	sintaxe:
+				outline: <estilo> <largura> <cor>
+				outline: solid 10px blue;
+

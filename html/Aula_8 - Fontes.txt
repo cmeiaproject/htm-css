@@ -1,0 +1,96 @@
+Aula 8 - Fontes
+======
+
+.FONT-FAMILY
+	. é uma propriedade do css, usada para a formatação de fontes
+	. esta propriedade permite que um ou mais fontes sejam usadas
+	sintaxe:
+				font-family: <fonte>;
+				font-family: "<fonte_1>", <fonte_2>;
+	exemplo:
+				<style>
+					p
+					{
+						font-family: "Courier New", Arial;
+					}
+					.box
+					{
+						font-family: Arial;
+					}
+				</style>	
+				
+	. quando especificada mais de uma fonte, o navegador ira verificar se a fonte declarada existe no computador, caso não, ira passar para a próxima.
+	. não encontrando a fonte, será colocada uma fonte genérica.	
+				
+*** NOTA
+*** AO DEFINIR O NOME DE UMA FONTE NA PROPRIEDADE FONT-FAMILY, E SE ESTE NOME FOR COMPOSTO, O NOME DEVE SER COLOCADOS ENTRE ASPAS (")
+
+. FONT-SIZE
+	. é uma propriedade css, responsavel pelo tamanho da fonte
+	. os tipos de valores que esta propriedade recebe são em: 
+		(valores absolutos)
+		- cm (centimetro)
+		- mm (milimetro)
+		- px (pixel)
+		- pt (ponto)
+		- pc (paica)
+		- in (polegada)
+		
+		(valores relativos)
+		- em (é relativo ao tamanho da letra M (maiusculo))
+		- ex (é relativo ao tamanho da letra x (minusculo))
+		- rem (é relativo ao tamanho da letra M (maiusculo) configurada no body ou *)
+		- vw (é relativo a largura do viewport da tela)		
+		- vh (é relativo a altura do viewport da tela)				
+		- % (é a porcentagem da area usada)
+	sintaxe:
+			font-size: <valor><tipo de valor>;
+			
+	exemplo:
+			font-size: 1px;
+			
+*** NOTA			
+*** OS TIPOS DO VALOR DA FONT-SIZE A SER USADA RECOMENDADA É VALORES EM PX OU EM
+
+
+. FONT-WEIGHT
+	. esta propriedade é responsavel por definir o "peso" (espessura) da fonte.
+	. os valores que esta propriedade recebe são:
+		- ligther 	// espessura da fonte fina			
+		- normal	// espessura da fonte normal			
+		- bold      // espessura da fonte grossa			
+		- bolder    // espessura da fonte muito grossa			
+	sintaxe:
+			font-weight: <valor>;
+				
+	exemplo:
+			font-weight: ligther; 
+				
+*** NOTA
+*** NEM TODAS AS FONTES POSSUI TODAS AS VARIAÇÕES QUE A PROPRIEDADE FONT-WEIGHT TRABALHA
+				
+				
+. FONT-STYLE
+	. esta propriedade é responsavel por definir o estulo da fonte.
+	. os valores que esta propriedade recebe são:
+		- italic
+		- normal
+	sintaxe:
+			font-style: <valor>;
+			
+	exemplo:
+			font-style: italic; 	
+
+. ABREVIANDO O USO DA CONFIGURAÇÃO DA FONTE (SHORTHAND)
+	. serve para simplificar o uso das propridades da fonte em uma unica linha.
+	. recebe os seguintes parametros, na seguinte ordem:
+		1. font-style
+		2. font-weight
+		3. font-size
+		4. dont-family
+	sintaxe:
+			font: <font-style> <font-weight> <font-size> <font-family>
+				
+	exemplo:
+			1. font: italic bold 1em "Times New Roman", Arial;
+			2. font: bold 1em "Courier New", Arial; 

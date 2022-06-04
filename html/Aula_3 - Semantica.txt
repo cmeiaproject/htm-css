@@ -1,0 +1,42 @@
+Aula 3 - Semantica
+======
+
+. A semantica consiste no significado das coisas. Dar o sentido  da coisa
+
+ADDRESS
+=======
+	. é uma tag especifica para endereços (logradouro)
+	. esta tag identifica para o navegador o sentido de que esta se tratando do endereço de um local. 
+		sintaxe:
+				<address>conteudo</address>
+		exemplo:
+				<p>Meu escritorio fica na <address>Rua X, 10</address></p>
+				
+	. se, estiver sendo acessado por um dispositivo movel, a informação contida nesta tag, pode ser acessada pelo google maps.			
+	
+EM
+==	
+	. é uma tag especifica para dar enfase ao texto. (semelhante a tag <i>)
+	. a diferença entre esta tag e a tag <i>, é que a tag <i> trata da forma, enquanto que a tag <em> trata do sentido.
+	. tag usada para dar semantica no conteudo da pagina
+	. quer dizer, a tag <em> esta "enfatizando" um texto, dizendo para o navegador enfatizar algo (dando sentido), enquanto a tag <i> só muda o formato.
+		sintaxe:
+				<em>conteudo</em>
+				
+		exemplo:
+				Ele falou:"<em>Independencia, ou morte</em>"
+	
+
+STRONG
+======	
+	. é uma tag especifica para dar negrito ao texto. (semelhante a tag <b>)
+	. a diferença entre esta tag e a tag <b>, é que a tag <b> trata da forma, enquanto que a tag <strong> trata do sentido.
+	. tag usada para dar semantica no conteudo da pagina
+	. quer dizer, a tag <strong> esta "enfatizando" um texto, dizendo para o navegador enfatizar algo (dando sentido), enquanto a tag <b> só muda o formato.
+		sintaxe:
+				<strong>conteudo</strong>
+				
+		exemplo:
+				Saoba de uma coisa <strong>O Eterno é o unico e verdadeiro Deus</strong>
+	
+	

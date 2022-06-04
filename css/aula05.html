@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Aula 05</title>
+		<style>
+			.noticia:target
+			{
+				background-color: gray;
+				color: black;
+				padding: 50px;
+			}
+			#noticia1
+			{
+				width: 100%;
+				height: 100px;
+				background-color: red;
+				color: white;
+			}
+			#noticia2
+			{
+				width: 100%;
+				height: 100px;
+				background-color: blue;				
+				color: white;				
+			}
+			#imagem
+			{
+				width: 100%;
+				height: 100px;
+			}
+			img
+			{
+				filter: grayscale(96%) blur(5px);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div>
+			<div id="header">
+				<a href="#noticia1">Noticia 1</a>
+				<a href="#noticia2">Noticia 2</a>				
+			</div>	
+			<div id="noticia1" class="noticia">
+				<h1>Noticia 1</h1>
+				<p>Qualuer texto para a noticia</p>
+			</div>
+			<div id="noticia2" class="noticia">
+				<h1>Noticia 2</h1>
+				<p>Qualuer texto para a noticia</p>
+			</div>
+			<div id="imagem">
+				<img src="img/Controle-de-Estoque_03-800x800.jpg"/>
+			</div>
+		</div>	
+		
+	</body>
+</html>

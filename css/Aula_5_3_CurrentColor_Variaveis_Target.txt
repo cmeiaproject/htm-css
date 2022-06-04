@@ -1,0 +1,109 @@
+Aula 05.3 - CurrentColor, Variaveis, Target
+===========================================
+
+.CURRENTCOLOR
+	. este atributo pega a color do elemento.
+	exemplo:
+				<head>
+					<style>
+						button
+						{
+							color: green; // altera a cor da letra para verde
+							border: 1px solid currentcolor; // o currentcolor ira pegar a cor definida na propriedade color
+						}
+					</style>
+				</head>
+				<body>
+					<button>Confirmar</button>
+				</body>
+				
+.DEFININDO VARIAVEIS
+	. o css permite criar variaveis.
+	. para definir é necessário colocar '--' antes do nome da variavel
+	sintaxe:
+				--<nome da variavel>: <valor>;
+
+
+.CONTENT
+	. é um atributo que insere um texto (conteudo) em um elemento html
+				
+				
+.ROOT
+	. é um seletor usado para definir as variaveis css.
+	. para usar este seletor é necessário colocar antes o ':'
+	sintaxe:
+				:root
+				{
+					--nome: 'andre';
+					--cor-de-fundo: red;
+				}
+				
+				
+.VAR
+	. é uma função que tras o valor de uma variavel definida
+	sintaxe:
+				var(<variavel>);
+				
+	exemplo:
+				<head>
+					<style>
+						:root
+						{
+							--cor_de-fundo: blue;
+							--conteudo: 'Testando conteudo';
+							--cor_do_texto: #ffe;
+						}
+						
+						#div1
+						{
+							content: var(--conteudo);
+							background-color: var(--cor_de_fundo);
+							color: var(--cor_do_fundo);
+						}
+						
+					</style>
+				</head>
+				<body>
+					<div id="div1">
+					</div>
+					<div id="div2">
+					</div>
+					<div id="div3">
+					</div>
+				</body>
+	
+	
+.TARGET
+	. é um pseudo-classe. Tem como função atribuir a ação (ou ações) a um elemento (ou elementos) escolhido(s)
+	. sendo uma pseudo-classe para ser chamada, é necessário atribuir ela a uma classe ou a um id de um elemento, usando os ':' depois declara-la
+	sintaxe:
+				<elemento, classe>:target{ declarações }
+				
+	exemplo:
+				<head>
+					<style>
+						// mesmo as divs tendo usando a mesma classe, o código abaixo só sera ativado para a div
+						// cuji o link foi captado pela pseudo-classe TARGET.
+						// no momento do clique em um dos links, o TARGET irá fazer com que a estilização da classe
+						// "noticia" seja ativada somente para a div apontada pelo link capturado pelo TARGET.
+						.noticia:target
+						{
+							background-color: gray;
+							padding: 10px;
+						}
+					</style>
+				</head>
+				<body>
+					<a href="#noticia1">Noticia 1</a> 
+					<a href="#noticia2">Noticia 2</a> 					
+					<div id="noticia1" class="noticia">
+						<h1>Noticia 1</h1>
+						<p>Qualquer coisa</p>
+					</div>
+					<div id="noticia2" class="noticia">
+						<h1>Noticia 2</h1>
+						<p>Qualquer coisa</p>
+					</div>
+				</body>
+			
+				

@@ -1,0 +1,209 @@
+Aula 4.3 - Float, Position
+==========================
+
+.FLOAT
+	. é atributo que especifica para qual lado o elemento html deve "flutar" ou ir
+	. este atributo faz com que dependendo das dimensões do elemento html e aonde ele esta alocado (entenda container), este atributo faz com que o elemento se mova para a posição indicada.
+	. este atributo recebe os seguintes valores:
+		- left
+			. faz com que o elemento seja alocado a esquerda.
+		- right
+			. faz com que o elemento seja alocado a direita.		
+		- none
+			. faz com que o elemento continue onde esta.		
+		- inherit
+			. herda o valor do float do container onde se encontra
+			
+	exemplo:
+				<head>
+					<style>
+						#base
+						{
+							background-color: green;
+							width: 600px;
+							height: 600px;							
+						}
+						#dir
+						{
+							background-color: red;						
+							width: 300px;
+							height: 300px;							
+							float: right;
+						}
+						#esq
+						{
+							background-color: blue;						
+							width: 300px;
+							height: 300px;	
+							float: left;		
+						}
+					</style>
+				</head>
+				<body>
+					<div id="base">
+						<div id="esq">
+						</div>
+						<div id="dir">
+						</div>
+					</div>	
+				</body>
+
+*** NOTA
+*** SITUAÇÕES QUE PODEM ACONTECER
+*** SITUAÇÃO 1 ***
+*** APOS DEFINIR OS ELEMENTOS DIVS (ESQ E DIR) SE NÃO COLOCAR O ATRIBUTO FLOAT O ELEMENTO DIV#DIR FICARA DEBAIXO DO ELEMENTO *** DIV#ESQ, MESMO QUE AMBOS JUNTOS CAIBAM EM UMA MESMA LINHA. AMBOS TEM 300px DE LARGURA E O CONTAINER 600px.
+*** SITUAÇÃO 2 ***
+*** COLOCANDO O ATRIBUTO FLOAT SOMENTE NO ELEMENTO DIV#DIR, ESTE SERÁ ALOCADO PARA A DIREITA, MAS AINDA CONTINUARÁ DEBAIXO DO *** ELEMENTO DIV#ESQ. COMO NÃO FOI DEFINIDO PARA O ELEMENTO DIV#ESQ QUE ELE SÓ DEVE OCUPAR A POSIÇÃO A ESQUERDA DA LINHA ONDE 
+*** SE ENCONTRA, A PAGINA ENTENDE QUE MESMO A DIV#ESQ ESTANDO NA ESQUERDA, A LINHA É TODA RESERVADA PARA ESTE ELEMENTO.
+*** SITUAÇÃO 3 ***
+*** COLOCANDO O ATRIBUTO FLOAT NO ELEMENTO DIV#ESQ, A PAGINA PASSA A ENTENDER QUE ESTE ELEMENTO SÓ IRA USAR O ESPAÇO QUE ELE *** OCUPA A ESQUERDA (300px) E DEIXARÁ O RESTANTE LIVRE, ASSIM O ELEMENTO DIV#DIR PODERÁ OCUPAR O ESPAÇO LIVRE.
+
+
+.LEFT
+	. é um atributo de coordenada. Onde é definido a posição esquerda do elemento html	
+
+.RIGHT
+	. é um atributo de coordenada. Onde é definido a posição direita do elemento html	
+
+.TOP
+	. é um atributo de coordenada. Onde é definido o topo do elemento html	
+
+.BOTTOM
+	. é um atributo de coordenada. Onde é definido o rodapé do elemento html	
+
+
+.POSITION
+	. este atributo define o tipo de posicionamento de um elemento html.
+	. recebe os seguintes valores:
+		- static
+			. (valor padrão)
+			. faz com que o elemento html seja posicionado de acordo com o fluxo da página. Definir coordenadas para um elemento htnl cuja a posição seja estática não fará enhum efeito.
+			
+		- relative
+			. permite que o elemento html utilize as coordenadas passados pelo atributos:
+			  - left
+			  - right
+			  - top
+			  - bottom
+			. o position relative posiciona o elemento em relação a si mesmo. Ou seja, o ponto zero será o canto superior esquerdo, e ele começará a contar a partir dali.			  
+			  
+		- absolute
+			. permite que o elemento html utilize as coordenadas passados pelo atributos:
+			  - left
+			  - right
+			  - top
+			  - bottom
+			. se o elemento html estiver utilizando este tipo de posicionamento, e este mesmo elemento estiver alocado em um container cujo o tipo de posicionamento é static (lembrando que por padrão o tipo de posicionamento dos elemnetos html é static), o elemento html não se posicionará de acordo com o container (elemento html Pai), mas sim de acordo com o navegador
+			. para que o elemento html (filho) se posicione de acordo com o container em que ele se encontra, o container deverá ter seu tipo de posicionamento difrente de static	
+			  
+		- fixed
+			. permite que o elemento html utilize as coordenadas passados pelo atributos:
+			  - left
+			  - right
+			  - top
+			  - bottom
+			. faz com que o elemento fique fixo nas coordernadas que lhe foram passadas. Mesmo usando a barra de rolagem (scroll) o elemento permance na posição, não saindo do lugar.
+			
+		- sticky (-webkit-sticky)
+			. em outros navegadores é definido como -webkit-sticky
+			. permite que o elemento html utilize as coordenadas passados pelo atributos:
+			  - left
+			  - right
+			  - top
+			  - bottom
+			. um elemento html que tenha este tipo de posicionamento faz com que a sua posição seja baseada pela barra de rolagem.
+  			  Quer dizer, quando ha interação com a barra de rolagem e o elemento html começa a se deslocar, 
+			  quando este chega em um determinado ponto da rolagem, onde este elemento html deveria sumir, 
+			  este tipo de posicionamento começa a agir como o FIXED, fazendo com que o elemnto htmlfique fixado 
+			  na coordenada que foi definida.
+
+	exemplo:
+				<head>
+					<style>
+						#pai
+						{
+						}
+						#filho_static
+						{
+							width: 200px;
+							height: 200px;			
+							backgroud-color: #cfc;							
+						}
+						#filho_absolute
+						{
+							width: 200px;
+							height: 200px;	
+							position: absolute;
+							top: 10;
+							left: 10;	
+							backgroud-color: #ffc;
+						}
+						#filho_fixed_top
+						{
+							width: 100%
+							height: 200px;							
+							background-color: black;
+							position: fixed;
+							top: 0;
+						}
+						#filho_fixed_bottom
+						{
+							width: 100%
+							height: 200px;			
+							background-color: black;							
+							position: fixed;
+							bottom: 0;
+						}
+						#filho_sticky
+						{
+							width: 200px;
+							height: 200px;	
+							position: sticky;
+							position: -webkit-sticky;
+							border: 2px solid green;
+						}
+						#filho_relative
+						{
+							width: 200px;
+							height: 200px;	
+							position: relative;							
+						}
+						#neto_1_absolute
+						{
+							width: 100px;
+							height: 100px;	
+							position: absolute;
+							top: 10;
+							left: 10;	
+						}
+						#filho_fixed_bottom p, #filho_fixed_top padrão
+						{
+							color: white;
+							text-align: center;
+						}
+					</style>
+				</head>
+				<body>
+					<div id="pai">
+						<div id="filho_static">
+						</div>
+						<div id="filho_absolute">
+							<p>filho_absolute</p>						
+						</div>
+						<div id="filho_fixed_top">
+							<p>filho_fixed_top</p>
+						</div>
+						<div id="filho_fixed_bottom">
+							<p>filho_fixed_bottom</p>						
+						</div>
+						<div id="filho_sticky">
+							<p>filho_sticky</p>
+						</div>
+						<div id="filho_relative">
+								<p>filho_relative</p>																			
+							<div id="neto_1_absolute">
+								<p>neto 1</p>													
+							</div>
+						</div>
+					</div>
+				</body>

@@ -1,0 +1,97 @@
+Aula 12 - Caixas e Tipos de Caixa
+=======
+
+. O QUE É UMA CAIXA (BOX)
+
+	. é a região ocupada por um elemento html
+	. o tamanho da caixa (região) pode variar dependendo do elemento html.
+	. há elementos que a região ocupa a largura total da tela (mesmo que o conteúdo não seja para tanto), e outros que só ocupam o espaço que precisam.
+	. existem 2 tipos de caixa:
+		- BOX LEVEL
+		- INLINE LEVEL
+	
+	. ELEMENTOS QUE A REGIÃO USAM A LARGURA INTEIRA (BOX LEVEL)
+		. h1 a h6
+		. div
+		. p
+		. main
+		. section
+		. article
+		. footer
+		. header
+		. form
+		. aside
+		. nav
+		outros
+		(estes elementos são deste nivel, pois por padrão, o atributo DISPLAY esta setado como BLOCK. exemplo: display: block;)
+		
+
+	. ELEMENTOS QUE A REGIÃO USAM SOMENTE O ESPAÇO QUE PRECISA (INLINE LEVEL)
+		. a
+		. span
+		. select
+		. input
+		. label
+		. code
+		. em
+		. sup
+		. sub
+		. button
+		. small
+		. strong
+		outros
+		(estes elementos são deste nivel, pois por padrão, o atributo DISPLAY esta setado como INLINE. exemplo: display: inline;)		
+
+		
+. PADDING
+
+	. é usado para "inflar"	o conteúdo de um elemento.
+	. adiciona espaço interno entre o conteudo e o limite da região que este conteudo ocupa do elemento	
+	sintaxe:
+				padding: <valor>; // o valor pode ser em px, em, vh e polegadas
+				padding: <topo> <direita> <fundo> <esquerda>;  //simplificado (short-hand
+	
+	
+. BORDER	
+	
+	. é usado para fazer uma borda na região (box) do elemento
+	sintaxe:
+				border: <valor>; // o valor pode ser em px, em, vh e polegadas
+
+
+. MARGIN
+	
+	. é usado para fazer o afastamento de um elemento de outro elemento.
+	. adiciona espaço externo entre um elemento e outro.
+	sintaxe:
+				margin <valor>; // o valor pode ser em px, em, vh e polegadas
+				margin: <topo> <direita> <fundo> <esquerda>;	//simplificado (short-hand			
+			
+			
+	. CENTRALIZAR A CAIXA (BOX)
+	sintaxe:
+				margin: auto;
+	exemplo:
+				margin: auto; // ira centralizar a caixa nos 4 cantos na area onde se encontra
+				margin: 10px auto; // ira centralizar as margens direira e esquerda
+				margin: 10px 20px 30px auto; // ira centralizar a margem esquerda				
+
+	
+. OUTLINE
+	
+	. é usado para fazer uma contorno ao redor da borda da região alocada pelo elemento.
+	. é uma borda que contorna o border.
+	. é uma borda dentro da margem
+	
+	sintaxe:
+				outline <valor>; // o valor pode ser em px, em, vh e polegadas
+				// a mesma funcionalidade da propriedade border
+
+
+COMO É A ANATOMIA DE UMA CAIXA:
+
+		5.	MARGEM (margin)	
+			4.	BORDA EXTERNA (outline)
+				3.	BORDA INTERNA (border)	
+					2.	ESPAÇO INTERNO (padding)	
+						1. CONTEUDO

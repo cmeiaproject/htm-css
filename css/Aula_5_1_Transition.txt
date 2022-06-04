@@ -1,0 +1,166 @@
+Aula 05.1 - Transition
+======================
+
+.PSEUDO-CLASSES
+	. uma pseudo-classe (pseudo class) é uma palavra que especifica um determinado estado (evento) de um seletor
+	exemplo: 
+			<style>
+				#<seletor>:<pseudo class>
+			</style>
+			
+.HOVER
+	. é uma pseudo-classe.
+	. um evento que é acionado quando o mouse é passado por cima de um seletor
+	exemplo:
+			<style>
+				#exemplo:hover
+				{
+					códigos...
+				}
+			</sthe>
+			
+.TRANSITION
+	. é um atributo que serve para "suavizar" a transição de um estado para outro.
+	. o transition pode ser usado de modo "resumido" (ou estenografica), recebendo os seguintes parametros:
+		1. a propriedade que será usada para sofrer as alterações. 
+		   Se neste parametro for colocado "all", será entendido que todas as propriedades do elemento serão afetadas pela transição.
+		2. a duração (em segundos)
+		3. o ritmo da transição
+			- linear, faz com que a velocidade seja constante do inicio ao fim.
+			- ease, faz com que a transição comece lenta, depois fique rápida e depois termine lenta.
+			- ease-in, faz com que a transição começe lenta.
+			- ease-out, faz com que a transição termine lenta.
+			- ease-in-out, faz com que a transição comece e termine lenta.
+		4. o delay, quanto tempo esperar para iniciar o processso.
+	sintaxe:
+				transition: <propriedade> <duração> <ritmo> <delay>
+				
+	exemplo:
+			<style>
+				#exemplo
+				{
+					width: 50px;
+					height: 50px;
+					background-color: green;
+					transition: width 2s linear 1s;
+				}
+				
+				// o código abaixo fará com que ao passar o mouse sobre o elemento #exemplo seja atribuido
+				// a este elemento os novos valores para os atributos: height, width e bacground-color
+				#exemplo:hover
+				{
+					width: 150px;
+					height: 150px;
+					background-color: red;
+				}
+			</style>
+			
+.TRANSITION-PROPERTY			
+	. é um atributo que define qual a propriedade do elemento que será usada para sofrer as alterações.
+	. se neste parametro for colocado "all", será entendido que todas as propriedades do elemento serão afetadas pela transição.
+	
+	sintaxe:
+				transition-property: <propriedade do elemento>;
+
+.TRANSITION-DURATION
+	. é um atributo que define o tempo de duração da transição (em segundos)
+	sintaxe:
+				transition-duration: <periodo em segundo>;
+
+.TRANSITION-TIMING-FUNCTION
+	. é um atributo que define o ritmo usado para fazer a transição.
+	. valores recebidos:
+			- linear, faz com que a velocidade seja constante do inicio ao fim.
+			- ease, faz com que a transição comece lenta, depois fique rápida e depois termine lenta.
+			- ease-in, faz com que a transição começe lenta.
+			- ease-out, faz com que a transição termine lenta.
+			- ease-in-out, faz com que a transição comece e termine lenta.
+	
+	sintaxe:
+				transition-timing-function: <linear, ease, ease-in, ease-out, ease-in-out>;
+
+
+.TRANSITION-DELAY
+	. é um atributo que define o tempo de espera para iniciar a transição
+	sintaxe:
+				transition-delay: <periodo em segundos>
+				
+	exemplo 1:
+				<head>
+					<style>
+						#exemplo
+						{
+							width: 50px;
+							height: 50px;
+							background-color: red;
+							transition-property: width;
+							transition-duration: 3s;
+							transition-timung-function: ease;
+							transition-delay: 3s;
+						}
+						
+						#exemplo:hover
+						{
+							width: 150px;
+							height: 150px;
+							background-color: green;
+						}
+					</style>
+				</head>
+				<body>
+					<div id="exemplo">
+					</div>
+				</body>
+
+	exemplo 2:
+				<head>
+					<style>
+						#exemplo
+						{
+							width: 50px;
+							height: 50px;
+							background-color: red;
+							// o transition me permite manipular mais do que uma propriedade
+							// para usar outra propriedade e manipula-la, basta colocar uma virgula.
+							transition: width 3s ease 3s, height 1s linear 1s;
+						}
+						
+						#exemplo:hover
+						{
+							width: 150px;
+							height: 150px;
+							background-color: green;
+						}
+					</style>
+				</head>
+				<body>
+					<div id="exemplo">
+					</div>
+				</body>
+
+	exemplo 3:
+				<head>
+					<style>
+						#exemplo
+						{
+							width: 50px;
+							height: 50px;
+							background-color: red;
+							transition: all 3s ease 3s;
+						}
+						
+						#exemplo:hover
+						{
+							width: 150px;
+							height: 150px;
+							background-color: green;
+						}
+					</style>
+				</head>
+				<body>
+					<div id="exemplo">
+					</div>
+				</body>
+
+
+

@@ -1,0 +1,58 @@
+Aula 3 - Justity-Content, Align-Items e Align-Content
+======
+
+***NOTA	
+***OS ATRIBUTOS ABAIXO SÃO USADOS NO CONTAINER
+
+
+. JUSTITY-CONTENT
+
+	. este atributo serve para alinhar os itens de um container
+	. só funciona se os itens não ocuparem todo o espaço do container
+	. este atributo faz com que o container influencie na disposição dos seus itens, quer dizer, como os itens serão colocados (ou posicionados) dentro dele.
+	. estes são os valores que recebe:
+		- flex-start 	
+			(alinha a esquerda, se o [FLEX-DIRECTION] estiver com valor [ROW] ou [ROW-REVERSE])
+			(alinha no topo, se o [FLEX-DIRECTION] estiver com valor [COLUMN] ou [COLUMN-REVERSE])
+		- flex-end		
+			(alinha a direita, se o [FLEX-DIRECTION] estiver com valor [ROW] ou [ROW-REVERSE])
+			(alinha no rodape, se o [FLEX-DIRECTION] estiver com valor [COLUMN] ou [COLUMN-REVERSE])
+		- center		(centraliza)
+		- space-between	(coloca espaço entre os itens)
+		- space-around	(coloca espaço ao redor dos itens)
+	sintaxe:
+				justify-content: [flex-start/flex-end/center/space-between/space-arround];
+				
+				
+. ALIGN-ITEMS	
+
+	. este atributo serve para alinhar os itens de acordo com o eixo do container
+	. estes são os valores que este atributo recebe:
+		- flex-start	(alinha no top o conteudo do container, e só ocupa o espaço necessario)
+		- flex-end		(alinha no rodape o conteudo do container, e só ocupa o espaço necessario)
+		- stretch		(alinha o conteudo em todo espaço do container)
+		- center		(alinha o conteudo no meio do container, e só ocupa o espaço necessario)
+		- baseline		(alinha o conteudo de acordo com o primeiro item do container)		
+		
+	sintaxe:
+				align-items: [flex-start/flex-end/center/stretch/baseline];
+		
+		
+. ALIGN-CONTENT
+
+	. este atributo é usado para alinhar as linhas do container eixo vertical
+	. só ira funcionar se o item tiver mais de uma linha
+	. para isso, é necessário que o atributo [FLEX-WRAP] esteja com o valor [WRAP]
+	. também é necessario que o container seja maior do que a soma das linhas dos items
+	. estes são os valores que este atributo recebe:
+		- stretch
+		- flex-start
+		- flex-end
+		- center
+		- space-between
+		- sopace-around
+	. por padrão o valor é STRETCH	
+		
+	sintaxe:
+				align-content: [flex-start/flex-end/center/stretch/space-around/space-between];
+		

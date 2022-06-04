@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<head lang="pt-br">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pagina Teste</title>
+	<style>
+		*
+		{
+			padding: 0;
+			margin: 0;
+		}
+		
+		a
+		{
+			text-decoration: none;
+		}
+		
+		footer
+		{
+			background-color: black;
+			width: 100%;
+			height: 30vh;
+			float: left;
+		}	
+		
+		ul.header-menu
+		{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: black;
+		}
+		
+		ul.header-menu li
+		{
+			float: left;
+		}
+		
+		ul.header-menu li a
+		{
+			padding: 16px;
+			color: white;
+			display: block;
+		}
+		
+		ul.header-menu li a:hover
+		{
+			color: black;
+			background-color: silver;
+		}
+
+		.carrosel
+		{
+			float: left;
+			height: calc(100vh - 50px);
+			width: 100%;			
+			background-image: url("img/Arden_Santa_Ceia.jpg");	
+			background-repeat: no-repeat;	
+			background-size: cover;			
+		}
+		
+		.artigos-previa
+		{
+			float: left;
+			width: 90%;
+			height: 100vh;
+			padding-right: 5%;			
+			padding-left: 5%;						
+			box-sizing: box-border;						
+		}
+		
+		.artigos-previa h1
+		{
+			text-align: center;
+			padding: 30px;
+		}
+		
+		.artigo-previa 
+		{
+			float: left;
+			width: calc(90% / 3);
+			text-align: center;
+			padding-left: 5%;
+			box-sizing: box-border;						
+			height: 100%;
+		}
+		
+		.artigo-previa:first-of-type
+		{
+			padding-left: 0;
+		}
+		
+		.artigo-previa p
+		{
+			padding: 5px;
+			margin-top: 10px;
+			margin-bottom: 20px;			
+		}
+		
+		.artigo-previa a
+		{
+			padding: 10px;
+			background-color: red;
+			color: white;
+			border-radius: 20px;
+		}
+
+		.artigo
+		{
+			float: left;
+			width: 100%;
+			height: 100vh;
+		}
+		
+		.artigo h2
+		{
+			text-align: center;
+			padding: 30px;			
+		}
+		
+		.artigo img
+		{
+			width: 100%;
+			height: 50vh;
+		}
+		
+		.artigo p
+		{
+			padding: 15px;
+		}
+		
+		
+		
+	</style>
+</head>
+<html lang="pt-br">
+	<body>
+		<header>
+			<nav>
+				<ul class="header-menu">
+					<li><a href="#">INICIO</a></li>
+					<li><a href="#previa">MEIO</a></li>					
+					<li><a href="#rodape">FIM</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="carrosel">
+			</section>
+			<section class="artigos-previa" id="previa">
+				<h1>Artigos Diversos</h1>
+				<article class="artigo-previa">
+					<h2>Titulo 1</h2>
+					<p>Lorem ipsum fames velit imperdiet orci venenatis integer interdum mattis, cras etiam nibh proin aliquam dictum etiam mattis, lobortis mauris velit maecenas convallis risus class iaculis. mi lobortis eros cras aenean posuere senectus etiam facilisis, ligula facilisis cras habitant est tincidunt fusce ligula, amet augue magna ultricies consequat lacus ante. urna consequat etiam est vitae nullam nostra vestibulum curae, congue ultrices lobortis eget scelerisque accumsan cursus, nisi phasellus tellus bibendum aptent ultrices etiam. consequat lorem dui euismod interdum morbi euismod turpis sociosqu mauris risus donec, curabitur platea quisque potenti in scelerisque conubia orci posuere volutpat litora, feugiat tristique egestas ad etiam aenean proin ligula aenean mauris.</p>
+					<a href="#artigo-1">Veja mais...</a>
+				</article>
+				<article class="artigo-previa">
+					<h2>Titulo 2</h2>
+					<p>Lorem ipsum fames velit imperdiet orci venenatis integer interdum mattis, cras etiam nibh proin aliquam dictum etiam mattis, lobortis mauris velit maecenas convallis risus class iaculis. mi lobortis eros cras aenean posuere senectus etiam facilisis, ligula facilisis cras habitant est tincidunt fusce ligula, amet augue magna ultricies consequat lacus ante. urna consequat etiam est vitae nullam nostra vestibulum curae, congue ultrices lobortis eget scelerisque accumsan cursus, nisi phasellus tellus bibendum aptent ultrices etiam. consequat lorem dui euismod interdum morbi euismod turpis sociosqu mauris risus donec, curabitur platea quisque potenti in scelerisque conubia orci posuere volutpat litora, feugiat tristique egestas ad etiam aenean proin ligula aenean mauris.</p>
+					<a href="#artigo-2">Veja mais...</a>
+				</article>
+				<article class="artigo-previa">
+					<h2>Titulo 3</h2>
+					<p>Lorem ipsum fames velit imperdiet orci venenatis integer interdum mattis, cras etiam nibh proin aliquam dictum etiam mattis, lobortis mauris velit maecenas convallis risus class iaculis. mi lobortis eros cras aenean posuere senectus etiam facilisis, ligula facilisis cras habitant est tincidunt fusce ligula, amet augue magna ultricies consequat lacus ante. urna consequat etiam est vitae nullam nostra vestibulum curae, congue ultrices lobortis eget scelerisque accumsan cursus, nisi phasellus tellus bibendum aptent ultrices etiam. consequat lorem dui euismod interdum morbi euismod turpis sociosqu mauris risus donec, curabitur platea quisque potenti in scelerisque conubia orci posuere volutpat litora, feugiat tristique egestas ad etiam aenean proin ligula aenean mauris.</p>
+					<a href="#artigo-3">Veja mais...</a>
+				</article>
+			</section>	
+			<section id="artigo-1" class="artigo">
+				<h2>Titulo 1</h2>					
+				<figure>		
+					<img src="img/Arden_Santos_Cultos.png" />
+				<figure>	
+				<p>Lorem ipsum fames velit imperdiet orci venenatis integer interdum mattis, cras etiam nibh proin aliquam dictum etiam mattis, lobortis mauris velit maecenas convallis risus class iaculis. mi lobortis eros cras aenean posuere senectus etiam facilisis, ligula facilisis cras habitant est tincidunt fusce ligula, amet augue magna ultricies consequat lacus ante. urna consequat etiam est vitae nullam nostra vestibulum curae, congue ultrices lobortis eget scelerisque accumsan cursus, nisi phasellus tellus bibendum aptent ultrices etiam. consequat lorem dui euismod interdum morbi euismod turpis sociosqu mauris risus donec, curabitur platea quisque potenti in scelerisque conubia orci posuere volutpat litora, feugiat tristique egestas ad etiam aenean proin ligula aenean mauris.</p>					
+			</section>
+			<section id="artigo-2" class="artigo">
+				<h2>Titulo 2</h2>	
+				<figure>		
+					<img src="img/Arden_Santos_Cultos.png" />
+				<figure>	
+				<p>Lorem ipsum fames velit imperdiet orci venenatis integer interdum mattis, cras etiam nibh proin aliquam dictum etiam mattis, lobortis mauris velit maecenas convallis risus class iaculis. mi lobortis eros cras aenean posuere senectus etiam facilisis, ligula facilisis cras habitant est tincidunt fusce ligula, amet augue magna ultricies consequat lacus ante. urna consequat etiam est vitae nullam nostra vestibulum curae, congue ultrices lobortis eget scelerisque accumsan cursus, nisi phasellus tellus bibendum aptent ultrices etiam. consequat lorem dui euismod interdum morbi euismod turpis sociosqu mauris risus donec, curabitur platea quisque potenti in scelerisque conubia orci posuere volutpat litora, feugiat tristique egestas ad etiam aenean proin ligula aenean mauris.</p>					
+			</section>
+			<section id="artigo-3" class="artigo">
+				<h2>Titulo 3</h2>					
+				<figure>		
+					<img src="img/Arden_Santos_Cultos.png" />
+				<figure>	
+				<p>Lorem ipsum fames velit imperdiet orci venenatis integer interdum mattis, cras etiam nibh proin aliquam dictum etiam mattis, lobortis mauris velit maecenas convallis risus class iaculis. mi lobortis eros cras aenean posuere senectus etiam facilisis, ligula facilisis cras habitant est tincidunt fusce ligula, amet augue magna ultricies consequat lacus ante. urna consequat etiam est vitae nullam nostra vestibulum curae, congue ultrices lobortis eget scelerisque accumsan cursus, nisi phasellus tellus bibendum aptent ultrices etiam. consequat lorem dui euismod interdum morbi euismod turpis sociosqu mauris risus donec, curabitur platea quisque potenti in scelerisque conubia orci posuere volutpat litora, feugiat tristique egestas ad etiam aenean proin ligula aenean mauris.</p>					
+			</section>
+		</main>
+		<footer id="rodape">
+		</footer>
+	</body>	
+</html>

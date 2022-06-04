@@ -1,0 +1,52 @@
+Aula 9 - Usando Fontes Baixadas
+======
+
+.FONT-FACE
+
+	. é um seletor css, que é usado para identificar uma fonte que foi baixada.
+	. com este seletor, é possivel fazer com que o navegador do usuario possa utilizar a fonte que esta sendo usada na pagina, mesmo que o computador dele não tenha a fonte.
+	sintaxe:
+				@font-face { <conteúdo> }
+				
+	. ATRIBUTOS			
+		. FONT-FAMILY
+			. com este atributo é definido o nome da fonte. (O nome que quiser)
+			
+		. SRC
+			. este atributo identifica a localização do(s) arquivo(s) de fonte
+			
+		. FORMAT
+			. este atributo identifica o tipo da fonte
+			. estes são os valores que recebe:
+				- opentype (otf)
+				- truetype (ttf)
+				- embedded-opentype
+				- truetype-aat
+				- svg
+				
+	exemplo 1 :
+				1.	@font-face
+				2.	{
+				3.		font-family: "love exemplo";
+				4.		src: url('love larry.otf') format('opentype'), url('love larry.ttf') format('truetype');
+				5.	}
+		
+				// Na linha 1 é declarado o seletor @fonte-face
+				// Na linha 4 o atributo [SRC] recebe dois arquivos de fonte.
+				// Pois, dependendo do navegador, ele pode reconhecer um tipo de fonte e outro não.
+				// O atributo [URL] identifica onde esta o arquivo
+				// O atributo [FORMAT] identifica o tipo de fonte existente no arquivo. 
+			
+	exemplo 2:
+				<style>
+					@font-face
+					{
+						font-family: "love";
+						src: url('font/love larry.otf') format('opentype'), url('font/love larry.ttf') format('truetype');
+					}
+					
+					h1
+					{
+						font-family: love;
+					}
+				</style>

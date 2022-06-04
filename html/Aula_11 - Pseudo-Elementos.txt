@@ -1,0 +1,50 @@
+Aula 11 - Pseudo-Elementos
+=======
+
+. PSEUDO-ELEMENTOS
+
+	. são instruções (ou palavras chaves) de um elemento, que tem como finalidade, usar partes especificas deste elemento.
+	. para usar estas instruções, faz se necessário o uso do dois pontos 2x (::)
+	. o elemento pode ser :
+		1. classe
+		2. identificador
+		3. tag htnl
+		
+	sintaxe:
+				<elemento>::<pseudo-elemento>{}
+	
+	. AFTER
+		. este pseudo-elemento tem como finalidade, adicionar um conteudo DEPOIS do conteudo já existente no elemento
+		sintaxe:
+				<elemento>::after{}
+				
+		exemplo:
+				<style>
+					a::after
+					{
+						content: ' bla bla';
+					}
+				</style>
+				<body>
+					<a href="http://www.euadministro.com">euadministro</a>
+					<!-- o resultado na página será euadministro bla bla -->
+				</body>	
+		
+	. BEFORE
+		. este pseudo-elemento tem como finalidade, adicionar um conteudo ANTES do conteudo já existente no elemento
+		sintaxe:
+				<elemento>::before{}
+				
+		exemplo:
+				<style>
+					a::before
+					{
+						content: ' bla bla';
+					}
+				</style>
+				<body>
+					<a href="http://www.euadministro.com">euadministro</a>
+					<!-- o resultado na página será bla bla euadministro-->
+				</body>	
+		
+		

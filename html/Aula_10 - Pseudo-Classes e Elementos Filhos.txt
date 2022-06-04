@@ -1,0 +1,49 @@
+Aula 10 - Pseudo-Classes e Elementos Filhos
+=======
+
+. PSEUDO-CLASSES
+
+	. na realidade, não se trata de classes, mas de estados que um determinado elemento html pode estar, por exemplo:
+		- quando um mouse é passado por cima (hover);
+		- quando este elemento esta ativo (active);
+		- quando habilitado ou desabilitado (enabled ou disabled);
+		- e outros...
+	. para ter acesso a estes estados (pseudo-classes) é utilizado o dois pontos (:)
+	sintaxe:
+			<elemento>:<pseudo-classe ou estado>
+	
+	exemplo:
+			1.	div:hover
+			2.	{
+			3.		background-color: red;
+			4.	}
+			
+			// Na linha 1, esta identificando a tag [DIV] acessando a pseudo-classe [HOVER]
+			// quando este estado for acionado, executará o código que foi definido dentro deste escopo.
+		
+		
+. ELEMENTOS FILHOS			
+
+	. elementos filhos, são elementos que estão contidos dentro de um outro elemento.
+	. estes elementos, pertencem a container como divs, tables e outros
+	. para identificar um elemento filho em css, é utilizado o sinal de maior que (>)
+	sintaxe:
+			<elemento_pai> > <elemento_filho>
+			
+	exemplo 1:
+				1.	div > p
+				2.	{
+				3.		color: red;
+				4.	}
+				
+				// Na linha 1, identifica somente elementos paragrafos [P] que sejam filho de um elemento [DIV]
+				// outros paragrafos que não estejam nesta condição, não irão ser afetados pelo conteudo descrito.
+
+	exemplo 1:
+				1.	div:hover > p
+				2.	{
+				3.		color: green;
+				4.	}
+				
+				// O código acima informa ao navegador que todo paragrafo que esteja contido em um container [DIV] deve mudar a cor, quando o mouse passar por cima deste container.
+				

@@ -1,0 +1,98 @@
+Aula 05.2 - Background
+======================
+
+	
+.BACKGROUND-REPEAT
+	. este atributo define se a imagem repetirá ou não no fundo de um elemento.
+	. estes são os valores que este atributo recebe:
+		1. repeat-x 
+			- faz com que a imagem se repita somente na horinzontal.
+		2. repeat-y
+			- faz com que a imagem se repita somente na vertical.
+		3. no-repeat
+			- faz com que a imagem não se repita.
+			
+	exemplo:
+			<style>
+				#fundo
+				{
+					background-image: url('fundo.jpg');
+					background-repeat: repeat-x;
+				}
+			</style>
+			
+.BACKGROUND-POSITION
+	. este atributo posiciona a imagem dentro do container
+	. recebe o seguintes valores:
+		1. left
+		2. center
+		3. right		
+		4. left	top	
+		4. left	center			
+		4. left	bottom			
+		4. center top	
+		4. center center			
+		4. center bottom			
+		4. right top	
+		4. right center			
+		4. right bottom			
+		
+
+	exemplo:
+			<style>
+				#fundo
+				{
+					background-image: url('fundo.jpg');
+					background-position: right;
+				}
+			</style>
+			
+.BACKGROUND-ATTACHMENT
+	. este atributo define se a imagem acompanha ou não a barra de rolagem
+	. recebe o seguintes valores:
+		1. fixed
+			- faz com que a imagem fique fixa, fazendo com que mesmo usando a barra de rolagem a imagem ocupe 
+			  todo o espaço do container.
+		2. scroll (padrão)	
+			- faz com que a imagem acompanhe a barra de rolagem
+			
+	exemplo:
+			<style>
+				#fundo
+				{
+					background-image: url('fundo.jpg');
+					background-attachment: fixed;
+				}
+			</style>
+		
+		
+.BACKGROUND-SIZE
+	. este atributo define as dimensões da imagem.
+	. este atributo receber dois parametros:
+		1. altura e largura
+		2. cover, esta opção cobre o container inteiro
+		3. contain, faz quase a mesma coisa que o "cover", a diferença é que quando o tamnaho da imagem difere do container, o restante do conteudo é preenchido pela cor do fundo.
+		
+	exemplo:
+			<style>
+				#fundo
+				{
+					background-image: url('fundo.jpg');
+					background-size: 100px 200px;
+				}
+			</style>
+	
+.BACKGROUND
+	. este atributo define a imagem (ou cor) que será usada no fundo do elemento, como também pode ser usado
+	os outros atributos mencionados acima.
+	. este atributo é a forma resumida de usar todos os atributos do background
+	
+	exemplo:
+			<style>
+				#fundo
+				{
+					background: url('fundo.jpg') right/200px 300px fixed no-repeat;
+				}
+			</style>
+	
+	

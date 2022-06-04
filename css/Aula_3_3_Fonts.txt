@@ -1,0 +1,163 @@
+Aula 3.3 - Fonts
+================
+
+.FONT-FAMILY
+	. este atributo define um conjunto de fontes a serem usadas pelo navegador.
+	. nele são definidas familias de fontes especificas e fontes genéricas.
+	. se o nome da fonte conter espaços deve declarar o nome dela entre ""
+		exemplo: "Times New Roman"
+	. não é obrigatorio colocar todos os parametros		
+	sintaxe:
+				font-family: <nome_da_familia>, <nome_da_fonte_que_quer_usar>, <nome_da_familia_generica>
+				
+	. o exemplo abaixo faz com que o navegador procure (no computador) por uma fonte da familia Times, caso não encontre ele passa para o proximo parametro (valor) que é o "Times New Roman" e procura por esta fonte. Se não encontrar o navegador ira utilizar do terceiro parametro que trata da familia generica de fonte e ira buscar uma fonte que seja desta familia.
+	(A procura é no computador onde esta o navegador)
+	exemplo:				
+				font-family: Times, "Times New Roman", serif;
+				font-family: Arial;
+				
+				
+.FONT-VARIANT
+	. este atributo o formato do texto.
+	. recebe 2 valores:
+		- NORMAL (padrão)
+			. não faz nenhuma alteração no texto
+			
+		- SMALL-CAPS
+			. transforma todas as letras em minusculo para maiusculo, mas sem alterar o tamanho, quer dizer, a mesma altura que a letra tinha quando minusculo ela permanecerá quando for transformada para maisculo.
+	
+	sintaxe:
+				font-variant: <valor>
+	exemplo:				
+				font-variant: small-caps
+				
+
+				
+.FONT-WEIGHT
+	. este atributo serve para deixar em negrito o texto
+	. recebe 2 valores:
+		- NORMAL (padrão)
+			. não faz nenhuma alteração no texto		
+			
+		- BOLD		
+			. faz cm que o texto fique em negrito
+	
+	sintaxe:
+				font-weight: <valor>;
+				
+	exemplo:
+				font-weight: bold;
+				
+				
+.FONT-STYLE
+	. este atributo serve para estilizar o texto
+	. recebe 3 valores:
+		- NORMAL (padrão)
+			. não faz nenhuma alteração no texto		
+			
+		- ITALIC
+			. faz cm que o texto fique em italico;
+			
+		- OBLIQUE
+			. faz cm que o texto fique em italico negrito;
+			
+	
+	sintaxe:
+				font-style: <valor>;
+				
+	exemplo:
+				font-style: italic;				
+				font-style: oblique;								
+				
+				
+.FONT-SIZE				
+	. este atributo define o tamanho da fonte
+	
+	sintaxe:
+				font-size: <valor>;
+				
+	exemplo:
+				font-size: 20px;
+				
+				
+.EM
+	. é uma unidade de medida relativa.
+	. ela equivale a 16px.
+	. usada para que haja compatibilidade no tamanho das fontes de navegador para navegador. Assim o tamanho que é exibido em um navegador será igual quando for exibido em outro navagador
+				
+*** NOTA
+*** A W3C RECOMENDA QUE SE UTILIZE UNIDADES RELATIVAS PARA O TAMANHO DA FONTE	
+*** É PEDIDO ISSO POR QUESTÕES DE ACESSIBILIDADE
+*** RECOMENDA-SE A USAR PX OU EM
+
+PARA QUE FUNCIONE EM TODOS OS NAVEGADORES SEM PROBLEMAS
+	
+	exemplo 1:
+				<style>
+					*
+					{
+						font-size: 100%;
+					}
+					<elemento>
+					{
+						font-size: 1em; // equivale a 16px
+					}
+				</style>
+
+	exemplo 2:
+				<style>
+					*
+					{
+						font-size: 100%;
+					}
+					<elemento>
+					{
+						font-size: 2.5em; // equivale a 40px
+					}
+				</style>
+				
+.@FONT-FACE
+	. este atributo permite usar fontes externas
+	. é necessários acessar o arquivo de fonte para web. São arquivos com a extensão woff (Web Open Font Format. Este arquivo possui o formato de fontes adequados para web.
+
+		exemplo:
+					<style>
+						@font-face
+						{
+							font-family: <nome_da_familia_da_fonte_web_que_quer_usar>
+							src: url(<caminhp/nome_do_arquivo>.woff);
+						}
+						p
+						{
+							font-family: <nome_da_familia_da_fonte_web_que_quer_usar>
+						}
+					</style>
+					
+					<body>
+						<p>Teste de paragrafo</p>
+					</body>
+					
+*** NOTA
+*** O ARQUIVO QUE CONTEM A FONTE EXTERNA QUE SERÁ USADA NA PÁGINA DEVE SER NO FORMATO WOFF
+*** WEB OPEN FONT FORMAT (WOFF)					
+					
+					
+.SRC
+	. este atributo é responsavel por definir a origem (localização) de um recurdo ou informação
+
+	exemplo :
+				<style>
+					img
+					{
+						src: url(<arquivo>);
+					}
+				</style>
+				
+				
+.URL
+	. é uma função que adiciona um arquivo;			
+	sintaxe:
+				url(<caminho/nome_arquivo>);
+				
+					
+	

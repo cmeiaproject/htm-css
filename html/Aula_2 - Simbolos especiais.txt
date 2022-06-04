@@ -1,0 +1,20 @@
+Aula 2 - Simbolos especiais
+======
+
+.Simbolos usando no html
+
+	. &lt; corresponde ao '<' 
+	. &gt; corresponde ao '>' 
+	. &reg; corresponde ao simbolo de marca registrada
+	. &copy; corresponde ao simbolo de CopyRights
+	. &trade; corresponde ao simbolo de marca registrada (tm)
+
+. Simbolos emojis
+	- para que o qualquer navegador exiba um simbolo emoji, é necessário especificar o ccódigo em hexadecimal.
+	- no html o código hexadecimal é especificado por: &#x<codigo do emoji>
+	exemplo:
+			&#x1F5996;
+
+	(ver o site emojipedia)
+	
+
